@@ -1,0 +1,2922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Traction Safety Products. Site Mockup.</title>
+<style>
+  /* ---------- Reset / Base ---------- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ---------- Layout ---------- */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 820px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- Mockup Banner ---------- */
+  .mockup-banner {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Header / Nav ---------- */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #000;
+    z-index: 100;
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .wordmark {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .wordmark .endorse {
+    display: block;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #555;
+    margin-top: 2px;
+  }
+  nav.primary {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  nav.primary a {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  nav.primary a.active { border-bottom-color: #000; }
+  nav.primary a:hover { border-bottom-color: #888; }
+
+  /* ---------- Sub-nav for Industries pages ---------- */
+  .subnav {
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
+  }
+  .subnav-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 32px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .subnav-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #555;
+    font-weight: 700;
+  }
+  .subnav-row a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  .subnav-row a.active { border-bottom-color: #000; }
+  .subnav-row a:hover { border-bottom-color: #888; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid #000;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 52px;
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero-subhead {
+    font-size: 20px;
+    line-height: 1.45;
+    color: #222;
+    margin-bottom: 28px;
+    max-width: 540px;
+  }
+  .hero-body {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 32px;
+    max-width: 540px;
+  }
+
+  /* ---------- CTAs ---------- */
+  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn:hover { background: #000; color: #fff; }
+  .btn-primary { background: #000; color: #fff; }
+  .btn-primary:hover { background: #fff; color: #000; }
+  .btn-text {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+  .btn-text:hover { color: #555; border-bottom-color: #555; }
+
+  /* ---------- Image Placeholders ---------- */
+  .img-placeholder {
+    position: relative;
+    background: #f5f5f5;
+    border: 1px solid #000;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .img-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 18px,
+      rgba(0, 0, 0, 0.04) 18px,
+      rgba(0, 0, 0, 0.04) 19px
+    );
+  }
+  .img-placeholder span {
+    position: relative;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #666;
+    text-align: center;
+    background: #fff;
+    padding: 6px 14px;
+    border: 1px solid #000;
+  }
+  .img-tall { aspect-ratio: 3 / 4; }
+  .img-wide { aspect-ratio: 16 / 9; }
+  .img-square { aspect-ratio: 1 / 1; }
+
+  /* ---------- Sections ---------- */
+  section.page-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  section.page-section.alt {
+    background: #f7f7f7;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    max-width: 760px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  p { font-size: 16px; line-height: 1.65; color: #222; margin-bottom: 14px; max-width: 700px; }
+  p.lead { font-size: 18px; max-width: 760px; color: #111; }
+
+  /* ---------- Cards ---------- */
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .card-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .card {
+    border: 1px solid #000;
+    background: #fff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .card .img-placeholder {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #000;
+  }
+  .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .card-body p { font-size: 14.5px; flex: 1; }
+  .card-body .btn-text { margin-top: 12px; align-self: flex-start; }
+
+  /* ---------- Two-column splits ---------- */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .split.reverse > :first-child { order: 2; }
+  .split-text h2 { font-size: 32px; }
+
+  /* ---------- Lists ---------- */
+  ul.bullets, ol.numbered {
+    margin: 16px 0 24px 22px;
+    max-width: 700px;
+  }
+  ul.bullets li, ol.numbered li {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+    color: #222;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pullquote {
+    border-left: 4px solid #000;
+    padding: 8px 0 8px 24px;
+    margin: 32px 0;
+    font-size: 22px;
+    line-height: 1.4;
+    font-style: italic;
+    color: #111;
+    max-width: 760px;
+  }
+
+  /* ---------- Tables ---------- */
+  table.compare {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    border: 1px solid #000;
+  }
+  table.compare th, table.compare td {
+    border: 1px solid #000;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: top;
+  }
+  table.compare th {
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+  }
+
+  /* ---------- Form ---------- */
+  form.contact-form { margin-top: 32px; max-width: 720px; }
+  .form-row { margin-bottom: 18px; }
+  .form-row label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .form-row input, .form-row textarea, .form-row select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #000;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+  }
+  .form-row textarea { min-height: 110px; resize: vertical; }
+  .intent-group { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+  .intent-option {
+    flex: 1 1 200px;
+    border: 1px solid #000;
+    padding: 16px;
+    cursor: pointer;
+    background: #fff;
+  }
+  .intent-option h4 { color: #000; margin-bottom: 6px; }
+  .intent-option p { font-size: 14px; margin: 0; }
+  .intent-option:hover { background: #f0f0f0; }
+
+  /* Priority intent (Intent C) on Contact page */
+  .intent-priority {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 32px;
+    margin: 24px 0 32px;
+  }
+  .intent-priority .eyebrow {
+    color: #aaa;
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  .intent-priority h3 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .intent-priority p { color: #ddd; max-width: 720px; margin-bottom: 14px; }
+  .intent-priority .triggers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 22px;
+  }
+  .intent-priority .trigger-chip {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .intent-priority .cta-row { align-items: center; }
+  .intent-priority .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+  .intent-priority .btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+  .intent-priority .direct-line {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: #ccc;
+  }
+  .intent-priority .direct-line strong { color: #fff; font-size: 16px; }
+
+  /* ---------- Filter chips ---------- */
+  .chip-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0 32px; }
+  .chip {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #000;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    background: #fff;
+  }
+  .chip:hover, .chip.active { background: #000; color: #fff; }
+
+  /* ---------- Resource cards (smaller) ---------- */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .resource-card {
+    border: 1px solid #000;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .resource-card h4 { font-size: 11px; color: #000; margin-bottom: 10px; }
+  .resource-card h3 { font-size: 17px; line-height: 1.3; margin-bottom: 10px; }
+  .resource-card p { font-size: 14px; margin-bottom: 14px; flex: 1; }
+  .resource-meta {
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 0 32px;
+    margin-top: 0;
+  }
+  footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  footer h4 { color: #fff; margin-bottom: 16px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; font-size: 14px; }
+  footer ul li a { color: #ccc; }
+  footer ul li a:hover { color: #fff; text-decoration: underline; }
+  footer .footer-brand p { color: #999; font-size: 13px; margin-top: 14px; }
+  footer .footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 40px;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    color: #999;
+    font-size: 12px;
+  }
+
+  /* ---------- Page show/hide ---------- */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ---------- Traction sliver (home page teaser) ---------- */
+  .traction-sliver {
+    background: #fafafa;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 22px 0;
+  }
+  .traction-sliver .sliver-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .traction-sliver .sliver-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #555;
+  }
+  .traction-sliver .sliver-headline {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    min-width: 240px;
+  }
+
+  /* ---------- Matrix table (Industries hub) ---------- */
+  table.matrix {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 28px;
+    border: 1px solid #000;
+  }
+  table.matrix th,
+  table.matrix td {
+    border: 1px solid #000;
+    padding: 16px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.45;
+    vertical-align: top;
+  }
+  table.matrix thead th {
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+  }
+  table.matrix tbody th {
+    background: #f5f5f5;
+    font-weight: 700;
+    font-size: 15px;
+    width: 22%;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #000;
+  }
+
+  /* ---------- Reactive / urgent module ---------- */
+  .reactive-band {
+    background: #000;
+    color: #fff;
+    padding: 56px 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  .reactive-band .reactive-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #aaa;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .reactive-band .reactive-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+  }
+  .reactive-band h2 {
+    color: #fff;
+    margin-bottom: 18px;
+    max-width: 760px;
+  }
+  .reactive-band p {
+    color: #ddd;
+    max-width: 760px;
+    font-size: 17px;
+  }
+  .reactive-band .reactive-cta {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .reactive-band .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+  .reactive-band .btn:hover {
+    background: #000;
+    color: #fff;
+  }
+  .reactive-band .direct-line {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #ccc;
+  }
+  .reactive-band .direct-line strong { color: #fff; }
+
+  /* ---------- Site-wide Contact CTA (bottom of every page) ---------- */
+  .contact-cta {
+    background: #f5f5f5;
+    border-top: 1px solid #000;
+    padding: 64px 0;
+  }
+  .contact-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .contact-cta-text h4 {
+    margin-bottom: 8px;
+  }
+  .contact-cta-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .contact-cta-text p {
+    font-size: 16px;
+    color: #333;
+    max-width: 420px;
+  }
+  .contact-cta-form .form-row {
+    margin-bottom: 14px;
+  }
+  .contact-cta-form textarea {
+    min-height: 90px;
+  }
+  @media (max-width: 900px) {
+    .contact-cta-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* ---------- Newsletter band ---------- */
+  .newsletter-band {
+    background: #000;
+    color: #fff;
+    padding: 56px 0;
+  }
+  .newsletter-band .narrow { text-align: left; }
+  .newsletter-band h2 { color: #fff; }
+  .newsletter-band p { color: #ccc; max-width: 600px; }
+  .newsletter-band .nl-form { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .newsletter-band .nl-form input {
+    flex: 1 1 260px;
+    padding: 14px 16px;
+    border: 1px solid #fff;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    font-family: inherit;
+  }
+  .newsletter-band .nl-form input::placeholder { color: #888; }
+  .newsletter-band .btn { background: #fff; color: #000; border-color: #fff; }
+  .newsletter-band .btn:hover { background: #000; color: #fff; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    .hero-grid, .split, footer .footer-grid, .card-grid-3, .card-grid-2, .card-grid-4, .resource-grid {
+      grid-template-columns: 1fr;
+    }
+    .split.reverse > :first-child { order: 0; }
+    nav.primary { display: none; }
+    .hero { padding: 48px 0 40px; }
+    section.page-section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">Mockup · Visual placeholder only · Black and White draft</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="nav-row">
+    <div class="wordmark" data-nav="home">
+      TRACTION SAFETY PRODUCTS
+    </div>
+    <nav class="primary">
+      <a data-nav="home" class="active">Home</a>
+      <a data-nav="products">Products</a>
+      <a data-nav="industries">Industries</a>
+      <a data-nav="resources">Resources</a>
+      <a data-nav="traction">Why Traction</a>
+      <a data-nav="about">About</a>
+      <a data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: HOME ============================ -->
+<!-- ====================================================== -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Traction Safety Products</div>
+          <h1>We engineer the surfaces that prevent slips and falls.</h1>
+          <p class="hero-subhead">Traction surfaces built for the floors, walkways, and access points where falls happen most often.</p>
+          <p class="hero-body">Most slip-and-fall incidents trace back to a surface that was never built for the conditions it ended up in. We design and manufacture traction surfaces that prevent those incidents. We work with teams designing new surfaces and with teams fixing the ones already on the floor.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-nav="products">Explore our products</a>
+            <a class="btn" data-nav="contact">Talk to a specialist</a>
+          </div>
+        </div>
+        <div class="img-placeholder img-square">
+          <span>Hero Image · Industrial floor / engineered surface in real conditions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>What we do</h4>
+      <h2>We engineer traction surfaces for real environments.</h2>
+      <p class="lead">We make two products that prevent slips and falls. ALGRIP® builds traction directly into the surface itself, used when you are designing or replacing the surface. OnGrip® applies engineered traction to a surface that is already in place. Both keep people upright on floors that would otherwise be too wet, oily, or worn to be safe.</p>
+      <div class="card-grid-3">
+        <div class="card">
+          <div class="img-placeholder"><span>ALGRIP® Detail Photo</span></div>
+          <div class="card-body">
+            <h3>Surface-integrated traction</h3>
+            <p>ALGRIP® bonds traction directly into the surface itself. Built for new installations, replacements, and the high-demand areas where performance has to stay consistent over time.</p>
+            <a class="btn-text" data-nav="products-algrip">Learn about ALGRIP® →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>OnGrip® Application Photo</span></div>
+          <div class="card-body">
+            <h3>Applied traction for existing surfaces</h3>
+            <p>OnGrip® delivers traction performance on surfaces that are already in service, including legacy ALGRIP®. Useful for staged retrofits, specific problem zones, and conditions that change over time.</p>
+            <a class="btn-text" data-nav="products-ongrip">Learn about OnGrip® →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Environment Photo · Wet / Washdown</span></div>
+          <div class="card-body">
+            <h3>Engineered for the environment</h3>
+            <p>Wet floors, oils, washdown chemistry, heavy traffic. The kinds of conditions that defeat off-the-shelf surfaces are the ones our products are built for.</p>
+            <a class="btn-text" data-nav="products">See the engineering approach →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Industries</h4>
+      <h2>Where traction has the biggest impact.</h2>
+      <p class="lead">We work across industrial, public-access, and operational environments. Different problems, different conditions, the same underlying approach.</p>
+      <div class="card-grid-4">
+        <div class="card">
+          <div class="img-placeholder"><span>Food and Beverage Facility</span></div>
+          <div class="card-body">
+            <h3>Food and Beverage</h3>
+            <p>Wet floors, washdown cycles, and continuous production make traction one of the most underestimated risks in the industry.</p>
+            <a class="btn-text" data-nav="industries-fb">See how we approach food and beverage →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Manufacturing Plant</span></div>
+          <div class="card-body">
+            <h3>Manufacturing</h3>
+            <p>Oils, coolants, forklift traffic, and mixed work zones. Traction is an engineering problem, not a cleanup problem.</p>
+            <a class="btn-text" data-nav="industries-mfg">See how we approach manufacturing →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Hospitality / Public Access</span></div>
+          <div class="card-body">
+            <h3>Hospitality and Public Access</h3>
+            <p>Customer-facing surfaces where ADA expectations, premises liability, and brand experience all meet on the floor.</p>
+            <a class="btn-text" data-nav="industries-hosp">See how we approach hospitality →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Transportation Infrastructure</span></div>
+          <div class="card-body">
+            <h3>Transportation and Infrastructure</h3>
+            <p>Train platforms, transit stations, airport walkways, marine decks. Outdoor surfaces under heavy public traffic.</p>
+            <a class="btn-text" data-nav="industries-trans">See how we approach transportation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sliver: dog whistle for visitors who do need the timing argument -->
+  <section class="traction-sliver">
+    <div class="container sliver-row">
+      <span class="sliver-eyebrow">Why traction matters</span>
+      <span class="sliver-headline">What "too late" actually costs.</span>
+      <a class="btn-text" data-nav="traction">Read more →</a>
+    </div>
+  </section>
+
+  <!-- Why TSP: ALGRIP and OnGrip legacy as the credibility prop -->
+  <section class="page-section alt">
+    <div class="container">
+      <div class="split reverse">
+        <div class="img-placeholder img-wide"><span>ALGRIP® / OnGrip® surface detail · Macro</span></div>
+        <div>
+          <h4>Why TSP</h4>
+          <h2>Built on products that have been in service for decades.</h2>
+          <p>ALGRIP® and OnGrip® have been engineered into industrial floors, public-access surfaces, and infrastructure assets for years. They earned a reputation in the industries that used them. Traction Safety Products is the focused brand built around those products and around the engineering discipline they require.</p>
+          <a class="btn-text" data-nav="about">Read more about the brand →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources teaser -->
+  <section class="page-section">
+    <div class="container">
+      <h4>Resources</h4>
+      <h2>Think about traction differently.</h2>
+      <p class="lead">Short, role-specific reading for the people who own safety, design, or operations.</p>
+      <ul class="bullets">
+        <li><strong>For safety leaders:</strong> How to defend a traction decision before, not after, an incident.</li>
+        <li><strong>For engineers:</strong> When traction should be part of the base spec instead of a value-engineering line item.</li>
+        <li><strong>For operations:</strong> What happens when a temporary slip fix becomes the permanent solution.</li>
+      </ul>
+      <a class="btn" data-nav="resources">Browse all resources</a>
+    </div>
+  </section>
+
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: WHY TRACTION MATTERS ============ -->
+<!-- ====================================================== -->
+<div class="page" id="page-traction">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Why Traction Matters</div>
+          <h1>Traction safety should be part of the design, not the recovery plan.</h1>
+          <p class="hero-subhead">Most traction decisions get made after something goes wrong. This page is about what changes when they get made earlier.</p>
+          <p class="hero-body">Slips, trips, and falls are among the most common sources of workplace injury, and among the most preventable. They keep happening because traction usually enters the conversation too late to influence the outcome. The science is clear and the products exist. The timing is the problem.</p>
+        </div>
+        <div class="img-placeholder">
+          <span>Editorial Hero · Slip-risk environment, designed view</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>The category, reframed</h4>
+      <h2>How traction usually gets decided.</h2>
+      <p>Late. The conversation tends to start after a slip, an audit finding, or a renewal letter from the insurer. By the time it gets going, the project is built and the budget is locked. Whatever traction solution you choose at that point will feel like an upgrade rather than a design choice.</p>
+      <h3 style="margin-top: 32px;">How it should get decided</h3>
+      <p>As a piece of how the building works. Specified during design. Engineered for the conditions a floor actually sees. Defensible from day one, not bolted on after the first claim.</p>
+      <h3 style="margin-top: 32px;">Why the timing keeps slipping</h3>
+      <p>Traction is rarely owned by a single function. Safety and EHS leaders care about it most, but the decisions that shape it often happen earlier, in engineering, design, and procurement, before safety gets a meaningful vote. Engineers can treat traction as a finishing detail. Procurement reads it as a discretionary line item. Operations only feels its absence in incident reports and maintenance tickets. The people who care most about traction end up with the least leverage to specify it.</p>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Diagram · Surface cross-section / specification</span></div>
+        <div>
+          <h4>What "engineered traction" actually means</h4>
+          <h2>Engineered, not improvised.</h2>
+          <p>Traction has to be engineered for the conditions a surface will actually see, the same way you would engineer load or span. That can mean a surface where traction is bonded directly into the material itself (ALGRIP®). It can also mean an engineered traction layer applied to an existing surface (OnGrip®). What it should not mean is hoping a generic finish, an off-the-shelf coating, or a housekeeping policy will make a slippery floor safe.</p>
+          <h4 style="margin-top: 24px;">How we evaluate environments</h4>
+          <ul class="bullets">
+            <li>Wet, greasy, and washdown conditions</li>
+            <li>High-traffic and high-abrasion areas</li>
+            <li>Mixed-condition zones like entrances, transitions, and crossovers</li>
+            <li>Compliance-sensitive public-access areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Where traction belongs in the buying process</h4>
+      <h2>Earlier than most teams think.</h2>
+      <p>There is a moment in every project, somewhere between concept and specification, where traction can be added at almost no incremental cost. There is another moment, much later, when adding it becomes a budget event. The most useful question a project team can ask is which of those moments they are currently in.</p>
+      <h3 style="margin-top: 32px;">A simple sequence to follow</h3>
+      <ol class="numbered">
+        <li><strong>Define the operating environment.</strong> What does the floor actually see? Water, grease, traffic, abrasion, chemistry.</li>
+        <li><strong>Match the surface to the environment.</strong> Engineered traction surfaces are not interchangeable. Selection is application-specific.</li>
+        <li><strong>Specify it. Do not assume it.</strong> Make traction a line item, not an unspoken design intent.</li>
+        <li><strong>Build defensibility into the record.</strong> Standards alignment, performance documentation, and consistent decision logic create a record that holds up under scrutiny.</li>
+        <li><strong>Plan for change.</strong> Conditions evolve. Leave a path for upgrades, retrofits, and adjacent applications.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>By role</h4>
+      <h2>Who owns traction safety?</h2>
+      <p class="lead">Everyone with a meaningful stake in design, operations, safety, or capital decisions has a role. The useful question is what each function should be asking.</p>
+      <div class="card-grid-2" style="margin-top: 32px;">
+        <div class="card"><div class="card-body">
+          <h3>Safety and EHS leaders</h3>
+          <p>Ask whether each traction decision could be defended six months from now. If the answer is unclear, traction has not been specified. It has been hoped for.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Engineers and specifiers</h3>
+          <p>Ask whether traction is a design variable in your current projects or a downstream correction. Specifying it early is one of the more reliable ways to prevent late-stage change orders.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Operations and facilities</h3>
+          <p>Ask what the maintenance and downtime profile of your current traction approach actually looks like. Recurring complaints and repeated stopgaps are signs of an engineering problem, not a behavior problem.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Procurement and finance</h3>
+          <p>Ask what total cost of ownership looks like across the life of the surface. Unit price is almost never the most important number.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="pullquote">A good traction program does more than reduce incidents. It leaves behind a defensible record of why the decisions made sense on the day they were made.</div>
+      <h4 style="margin-top: 32px;">Next steps</h4>
+      <h2>Where to go from here.</h2>
+      <ul class="bullets">
+        <li>If you are responsible for safety, start with the resources written for your role.</li>
+        <li>If you are specifying for an active project, look at how ALGRIP® and OnGrip® compare.</li>
+        <li>If you operate or maintain the facility, see how traction performs in real conditions.</li>
+        <li>If you are scoping a problem or responding to an incident, get in touch.</li>
+      </ul>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a class="btn btn-primary" data-nav="products">Explore the products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: PRODUCTS ======================== -->
+<!-- ====================================================== -->
+<div class="page" id="page-products">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Products</div>
+          <h1>Engineered traction surfaces, built for the conditions you operate in.</h1>
+          <p class="hero-subhead">Two purpose-built product platforms. One way of thinking about traction performance.</p>
+          <p class="hero-body">We offer two engineered approaches to traction. One is built into the surface itself, and one is engineered to be applied where surfaces are already in service. The goal is not to sell a category. It is to match the right approach to the conditions on the ground.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
+          </div>
+        </div>
+        <div class="img-placeholder"><span>Product Hero · ALGRIP® + OnGrip® detail</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>The TSP product philosophy</h4>
+      <h2>How we think about traction.</h2>
+      <p>Off-the-shelf solutions tend to assume an average environment. The environments where traction matters most are anything but average. Wet, greasy, washdown, and high-traffic areas defeat surfaces that were never engineered for them. Our two product platforms exist because there is no single right answer. There is a right answer for your environment, your project stage, and the level of performance you need.</p>
+      <h3 style="margin-top: 32px;">What every TSP product is built to do</h3>
+      <ul class="bullets">
+        <li>Deliver consistent traction performance under the real conditions of the application.</li>
+        <li>Stand up to mechanical loading, cleaning protocols, and chemical exposure without degrading early.</li>
+        <li>Integrate cleanly with the surrounding surface, structure, or operational flow.</li>
+        <li>Support clear specification, documented performance, and a defensible record of the decision.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder img-tall"><span>ALGRIP® Surface Macro Photo</span></div>
+        <div>
+          <h4>ALGRIP®</h4>
+          <h2>Surface-integrated traction.</h2>
+          <p>ALGRIP® is an engineered traction surface where the traction is bonded into the surface itself. It is the right choice when traction has to be a property of the floor, step, or platform rather than a layer applied on top of it.</p>
+          <h4 style="margin-top: 24px;">Best fit when</h4>
+          <ul class="bullets">
+            <li>The project is at the design or specification stage.</li>
+            <li>Performance has to stay consistent over years of use, cleaning, and wear.</li>
+            <li>The application needs a surface that is engineered, manufactured, and documented to spec.</li>
+            <li>New stair treads, walkways, platforms, or access surfaces are being designed or replaced.</li>
+          </ul>
+          <div class="cta-row" style="margin-top: 20px;">
+            <a class="btn-text" data-nav="products-algrip">Learn more about ALGRIP® →</a>
+            <a class="btn-text" data-nav="contact" style="margin-left: 24px;">Talk to an engineer →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split reverse">
+        <div class="img-placeholder img-tall"><span>OnGrip® Application Photo</span></div>
+        <div>
+          <h4>OnGrip®</h4>
+          <h2>Applied traction for existing surfaces.</h2>
+          <p>OnGrip® is an engineered, applied traction solution for environments where the surface is already in place, or where conditions have changed since the original surface was specified. It is the right choice when the goal is to bring an existing surface up to a higher level of traction performance without removing or replacing it.</p>
+          <p style="margin-top: 14px;"><strong>Most teams reach for OnGrip® because something has already happened.</strong> An incident report. An OSHA finding. A letter from the insurance carrier. A claim that surfaced traction as the issue. We meet that conversation where it is, and we work backward from the moment that triggered it to a surface decision that holds up under whatever scrutiny comes next.</p>
+          <h4 style="margin-top: 24px;">Best fit when</h4>
+          <ul class="bullets">
+            <li>An existing facility has emerging traction issues or newly identified risk areas.</li>
+            <li>A staged retrofit is the better answer than wholesale replacement.</li>
+            <li>A facility is preparing for an audit, an insurance renewal, or an operational change.</li>
+            <li>Specific zones need targeted improvement without disrupting the rest of the surface.</li>
+          </ul>
+          <div class="cta-row" style="margin-top: 20px;">
+            <a class="btn-text" data-nav="products-ongrip">Learn more about OnGrip® →</a>
+            <a class="btn-text" data-nav="contact" style="margin-left: 24px;">Talk to a specialist →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Choosing between ALGRIP® and OnGrip®</h4>
+      <h2>Two approaches, one framework.</h2>
+      <p>Most projects lean clearly toward one product or the other. A short side-by-side helps make the call.</p>
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Consideration</th>
+            <th>ALGRIP®</th>
+            <th>OnGrip®</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Project stage</td><td>Design, new build, planned replacement</td><td>Existing surface, retrofit, staged upgrade</td></tr>
+          <tr><td>Surface relationship</td><td>Integrated into the surface itself</td><td>Engineered to be applied to an existing surface</td></tr>
+          <tr><td>Best for</td><td>Long-term, foundational specification</td><td>Targeted upgrade and operational flexibility</td></tr>
+          <tr><td>Downtime profile</td><td>Aligned with the project schedule</td><td>Designed to minimize operational disruption</td></tr>
+          <tr><td>Documentation</td><td>Manufactured-to-spec record</td><td>Application record paired with substrate documentation</td></tr>
+        </tbody>
+      </table>
+      <div class="pullquote" style="margin-top: 40px;">There is no universally right product. There is only the right product for the environment, the project stage, and the level of performance the application needs.</div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Engineering and specification support</h4>
+      <h2>How we work alongside design and engineering teams.</h2>
+      <p>Specification questions rarely have one right answer in isolation. Our engineering and specification support is there to help your team make a defensible decision with the data you have.</p>
+      <ul class="bullets">
+        <li>Environmental review of the operating conditions.</li>
+        <li>Product platform recommendation with the rationale documented.</li>
+        <li>Specification language and detail support for design documents.</li>
+        <li>Sample coordination and on-site evaluation when helpful.</li>
+      </ul>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a class="btn btn-primary" data-nav="contact">Request a specification consult</a>
+        <a class="btn" data-nav="industries">See products in industry context</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: PRODUCTS. ALGRIP ================ -->
+<!-- ====================================================== -->
+<div class="page" id="page-products-algrip">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Products</span>
+      <a data-nav="products">Overview</a>
+      <a data-nav="products-algrip" class="active">ALGRIP®</a>
+      <a data-nav="products-ongrip">OnGrip®</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Products · ALGRIP®</div>
+          <h1>ALGRIP® is traction welded into the surface itself.</h1>
+          <p class="hero-subhead">A patented laser deposition process bonds metal traction features directly to metal grating or plate flooring. The result is engineered, durable slip resistance in wet, oily, or dirty conditions.</p>
+          <p class="hero-body">When a floor, stair tread, or walkway needs to perform across years of use and across changing conditions, ALGRIP® is the surface decision. It is engineered into the substrate, not applied on top of it, which is why it holds up where coatings and finishes age out.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
+            <a class="btn" data-nav="contact">Talk to an engineer</a>
+          </div>
+        </div>
+        <div class="img-placeholder img-square">
+          <span>Hero · ALGRIP® macro / surface detail photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Diagram · Laser deposition process</span></div>
+        <div>
+          <h4>How it works</h4>
+          <h2>A patented laser deposition process.</h2>
+          <p>Small metal traction features are welded directly to the surface of metal grating or plate. Shoes and tires encircle and grab those features, raising the dynamic coefficient of friction (DCOF) in every direction of travel. Because the features are welded to the substrate rather than bonded with adhesive or sprayed on as a layer, they perform through years of wear, cleaning chemistry, and chemical exposure.</p>
+          <p>The result is traction that behaves like a property of the surface, because it is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Performance and standards</h4>
+      <h2>Engineered to meet or exceed.</h2>
+      <p class="lead">ALGRIP® is specified in environments where compliance is documented and defended. The performance profile is what makes that defensible.</p>
+      <div class="card-grid-3">
+        <div class="card"><div class="card-body">
+          <h3>OSHA traction safety</h3>
+          <p>Meets or exceeds OSHA requirements for industrial walking and working surfaces, including multidirectional slip resistance.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>ADA Accessibility Guidelines</h3>
+          <p>Meets or exceeds ADA requirements for slip resistance on accessible surfaces, including ramps, walkways, and pedestrian bridges.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>High DCOF, in all directions</h3>
+          <p>Engineered traction features deliver a high dynamic coefficient of friction (DCOF) across every direction of travel. Wet, oily, dirty, dusty, or sanitary, the surface behaves consistently.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Common applications</h4>
+      <h2>Where ALGRIP® gets specified.</h2>
+      <p>ALGRIP® performs in environments where bacteria, cleanliness, and condensation are part of normal operations, and where the surface has to do its job through cleaning cycles, traffic, and time.</p>
+      <div class="card-grid-3" style="margin-top: 32px;">
+        <div class="card"><div class="img-placeholder"><span>Pedestrian Bridge</span></div><div class="card-body"><h3>Pedestrian bridges</h3><p>Public and private bridges, walkways, and access spans where slip risk meets ADA expectations.</p></div></div>
+        <div class="card"><div class="img-placeholder"><span>Walkway</span></div><div class="card-body"><h3>Walkways</h3><p>High-traffic indoor and outdoor walkways across industrial, public-access, and commercial settings.</p></div></div>
+        <div class="card"><div class="img-placeholder"><span>Stair Tread</span></div><div class="card-body"><h3>Stairs and stair treads</h3><p>Stairwells, mezzanines, and platform access where consistent grip on each step is non-negotiable.</p></div></div>
+        <div class="card"><div class="img-placeholder"><span>Floor Plate</span></div><div class="card-body"><h3>Floor plate</h3><p>Plate flooring in process and production environments that face oils, condensate, and washdown.</p></div></div>
+        <div class="card"><div class="img-placeholder"><span>Joint Cover</span></div><div class="card-body"><h3>Joint and expansion covers</h3><p>Bridge expansion joints, building joint covers, and other transition zones that need traction continuity.</p></div></div>
+        <div class="card"><div class="img-placeholder"><span>Ladder Rung</span></div><div class="card-body"><h3>Ladder rungs</h3><p>Fixed industrial ladders and access ladders where grip in oil, ice, or wet conditions is required.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Industries that specify ALGRIP®</h4>
+      <h2>Across the industries where the surface has to last.</h2>
+      <p class="lead">ALGRIP® is in service across food processing, pharmaceutical, mass transit, utilities, power plants, manufacturing, and heavy construction. It is the right choice where the surface has to perform for the life of the asset.</p>
+      <div class="chip-row" style="margin-top: 24px;">
+        <span class="chip">Food processing</span>
+        <span class="chip">Pharmaceutical</span>
+        <span class="chip">Mass transit</span>
+        <span class="chip">Utilities</span>
+        <span class="chip">Power plants</span>
+        <span class="chip">Manufacturing</span>
+        <span class="chip">Heavy construction</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h4>When to specify ALGRIP®</h4>
+          <h2>At design. At replacement. At the capital plan.</h2>
+          <p>ALGRIP® fits when the surface itself is being decided. The traction features are part of the substrate, so the decision lives with the building. We work with engineers and specifiers during design to identify the right grating type, material, and finish, and to produce documentation that holds up under audit.</p>
+          <ul class="bullets">
+            <li>Design and specification stage on a new project</li>
+            <li>Like-for-like replacement of an aging surface</li>
+            <li>Capital projects and planned floor upgrades</li>
+            <li>Compliance-driven specs (OSHA, ADA, AASHTO)</li>
+            <li>High-demand surfaces where consistency over years is required</li>
+          </ul>
+        </div>
+        <div class="img-placeholder img-tall"><span>Application Image · Spec / install context</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Featured project</h4>
+      <h2>Consolidated Edison, New York City.</h2>
+      <div class="split" style="margin-top: 24px;">
+        <div class="img-placeholder img-wide"><span>Times Square · Electric Vault Grating</span></div>
+        <div>
+          <h3>Electric vault gratings, Times Square.</h3>
+          <p>One of the busiest places on earth needed grating that gave Con-Edison line crews access to underground power lines, provided proper transformer ventilation, met AASHTO H20 truck-load requirements, and met ADA requirements for pedestrian use. The answer was a custom-engineered grating with ALGRIP® surface treatment, deployed across the electric vault gratings.</p>
+          <p class="lead">A single specification that defended itself against AASHTO, ADA, and the everyday volume of Times Square foot traffic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Engineering and specification support</h4>
+      <h2>We work alongside design and engineering teams.</h2>
+      <p>ALGRIP® is manufactured to specification. Our engineering team will help confirm fit, finish, dimensional and load requirements, and the performance documentation your safety, audit, and insurance teams will need on file.</p>
+      <ul class="bullets">
+        <li>Environmental review of the operating conditions</li>
+        <li>Grating type, material, and finish recommendation</li>
+        <li>Specification language and detail support for design documents</li>
+        <li>Sample coordination and on-site evaluation when helpful</li>
+      </ul>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
+        <a class="btn" data-nav="products-ongrip">Compare with OnGrip®</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: PRODUCTS. ONGRIP ================ -->
+<!-- ====================================================== -->
+<div class="page" id="page-products-ongrip">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Products</span>
+      <a data-nav="products">Overview</a>
+      <a data-nav="products-algrip">ALGRIP®</a>
+      <a data-nav="products-ongrip" class="active">OnGrip®</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Products · OnGrip®</div>
+          <h1>OnGrip® is engineered traction applied to the surface already on the floor.</h1>
+          <p class="hero-subhead">A thermal metal spray process coats existing metal surfaces with a high-traction layer. It is the right product when the surface has to stay where it is and the traction has to come to it.</p>
+          <p class="hero-body">OnGrip® is the right choice when the surface is already in place and the work is to upgrade it. That includes staged retrofits, problem zones in live facilities, and remediation after an incident, audit finding, or insurance demand. The process is engineered, applied directly to the surface, and documented as it goes.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
+            <a class="btn" data-nav="contact">Talk to a specialist</a>
+          </div>
+        </div>
+        <div class="img-placeholder img-square">
+          <span>Hero · OnGrip® application / surface detail photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Diagram · Thermal metal spray process</span></div>
+        <div>
+          <h4>How it works</h4>
+          <h2>A thermal metal spray process.</h2>
+          <p>An engineered, high-traction metal coating is thermally applied to the existing surface. The result is a durable, multidirectional traction layer that performs in slippery, wet, or oily conditions. The process is documented as it is applied, which makes the result defensible to safety, audit, and insurance teams later.</p>
+          <p>OnGrip® is engineered. It is not a paint, not a tape, and not a hopeful coating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Performance and standards</h4>
+      <h2>Engineered to meet or exceed.</h2>
+      <p class="lead">OnGrip® is specified into environments where the documentation matters. The performance profile is built for those moments.</p>
+      <div class="card-grid-3">
+        <div class="card"><div class="card-body">
+          <h3>Exceeds ANSI-NFSI DCOF</h3>
+          <p>Exceeds ANSI-NFSI standards for a high dynamic coefficient of friction, including in slippery environments.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>ADA Accessibility Guidelines</h3>
+          <p>Meets or exceeds ADA requirements for slip resistance on accessible surfaces.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Durable, long service life</h3>
+          <p>Engineered to deliver a long service life on the surface it is applied to, with documented performance over the life of the application.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Substrate compatibility</h4>
+      <h2>Where OnGrip® can be applied.</h2>
+      <p>OnGrip® bonds to three substrates that cover most of the metal surfaces already on industrial, public-access, and commercial properties.</p>
+      <div class="card-grid-3" style="margin-top: 32px;">
+        <div class="card"><div class="card-body"><h3>Carbon steel</h3><p>Plate flooring, stair treads, grating, ladder rungs, and structural surfaces across industrial and infrastructure assets.</p></div></div>
+        <div class="card"><div class="card-body"><h3>Stainless steel</h3><p>Food processing, pharmaceutical, and sanitary environments where stainless is the substrate of record.</p></div></div>
+        <div class="card"><div class="card-body"><h3>Aluminum</h3><p>Bridges, public-access walkways, marine assets, and weight-sensitive structural applications.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Industries that specify OnGrip®</h4>
+      <h2>Wherever a surface in service needs to be elevated.</h2>
+      <p class="lead">OnGrip® is in service across commercial, government, infrastructure, manufacturing, oil and gas, utilities, water and wastewater, pedestrian bridges, and parks and piers. The common thread is a surface that cannot be replaced economically and a need to upgrade traction against the conditions on the floor.</p>
+      <div class="chip-row" style="margin-top: 24px;">
+        <span class="chip">Commercial</span>
+        <span class="chip">Government</span>
+        <span class="chip">Infrastructure</span>
+        <span class="chip">Manufacturing</span>
+        <span class="chip">Oil and Gas</span>
+        <span class="chip">Utilities</span>
+        <span class="chip">Water and Wastewater</span>
+        <span class="chip">Pedestrian Bridges</span>
+        <span class="chip">Parks and Piers</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h4>When to specify OnGrip®</h4>
+          <h2>When the surface stays and the traction comes to it.</h2>
+          <p>OnGrip® fits when the surface is already in place and replacing it is not practical, not affordable, or not the right answer for the timeline. We work with operations, safety, and engineering teams to scope the work, plan around production, and document the result.</p>
+          <ul class="bullets">
+            <li>The surface is already in service and replacing it is not on the table</li>
+            <li>A staged retrofit is the better answer than wholesale replacement</li>
+            <li>A recent incident, audit finding, or insurance demand has created a remediation window</li>
+            <li>Specific zones (entries, transitions, problem corners) need targeted improvement</li>
+            <li>Lead times and downtime windows are tight</li>
+          </ul>
+        </div>
+        <div class="img-placeholder img-tall"><span>Application Image · In-service retrofit context</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Why teams choose OnGrip®</h4>
+      <h2>What sets it apart from the in-house workarounds.</h2>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h3>Flexible application process.</h3>
+          <p>The process works around production schedules and operating windows. Application is staged against the realities on the floor, not against an idealized installation calendar.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Short lead times.</h3>
+          <p>The remediation window after an incident or audit is rarely long. OnGrip® compresses the path from decision to documented result.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Lower total cost than replacement.</h3>
+          <p>Specifically because the existing surface stays in place, total cost is lower than removing and replacing grating, treads, or plate.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>Engineered, documented performance.</h3>
+          <p>The result is documented to a standard that holds up in front of a safety auditor, an OSHA inspector, or an insurance underwriter.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Featured projects</h4>
+      <h2>In service on landmark public infrastructure.</h2>
+      <div class="card-grid-2" style="margin-top: 24px;">
+        <div class="card">
+          <div class="img-placeholder"><span>Big River Crossing · Memphis, TN</span></div>
+          <div class="card-body">
+            <h4>Memphis, TN</h4>
+            <h3>Big River Crossing.</h3>
+            <p>The country's longest active bridge for rail, bicycles, and pedestrians. In partnership with the City of Memphis, we provided a combined 124,000 square feet of materials to construct the walkway deck, fence, and handrails. The crossing brought recreation and fitness to residents on both sides of the Mississippi.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>High Line Park Phase 2 · NYC</span></div>
+          <div class="card-body">
+            <h4>New York City, NY</h4>
+            <h3>High Line Park, Phase 2.</h3>
+            <p>An elevated rail line turned greenway. We crafted heavy-duty stainless steel grating that created a see-through look while remaining ADA-compliant and high-heel friendly. By making slight alterations, we achieved 68 percent transparency underfoot while still supporting maintenance vehicles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Engineering and specification support</h4>
+      <h2>We work alongside operations, safety, and engineering teams.</h2>
+      <p>Most OnGrip® projects involve a building that is still operating. The work happens around production. Our team helps scope the substrate, plan the application around the operating window, and document the result for the people who will read it later.</p>
+      <ul class="bullets">
+        <li>Substrate and condition review of the surface already in place</li>
+        <li>Application planning around operating windows and production constraints</li>
+        <li>Specification language and documentation for safety, audit, and insurance teams</li>
+        <li>Sample coordination and on-site evaluation when helpful</li>
+      </ul>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
+        <a class="btn" data-nav="products-algrip">Compare with ALGRIP®</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: INDUSTRIES HUB ================== -->
+<!-- ====================================================== -->
+<div class="page" id="page-industries">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Industries</div>
+          <h1>Industries we serve.</h1>
+          <p class="hero-subhead">Different environments, different traction problems, the same underlying approach.</p>
+          <p class="hero-body">Traction problems do not look the same from one industry to the next. The conditions that make a food processing floor slip-prone are very different from the ones on a hotel pool deck or a train platform. What stays constant is the right way to think about traction: specify it for the conditions the surface will actually see, document the decision, and revisit it when the conditions change.</p>
+        </div>
+        <div class="img-placeholder"><span>Industries Hero · Four-environment collage</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Pick the industry closest to your environment</h4>
+      <h2>Four lenses on the same problem.</h2>
+      <div class="card-grid-4">
+        <div class="card">
+          <div class="img-placeholder"><span>Food and Beverage Facility</span></div>
+          <div class="card-body">
+            <h3>Food and Beverage</h3>
+            <p>Wet floors, washdown cycles, oils, and continuous production. Where traction is most often misclassified as a sanitation problem.</p>
+            <a class="btn-text" data-nav="industries-fb">Food and Beverage →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Manufacturing Plant Floor</span></div>
+          <div class="card-body">
+            <h3>Manufacturing</h3>
+            <p>Oils, coolants, abrasion, forklift traffic, and mixed work zones. Traction as an engineering problem, not a cleanup problem.</p>
+            <a class="btn-text" data-nav="industries-mfg">Manufacturing →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Hotel Lobby / Pool Deck</span></div>
+          <div class="card-body">
+            <h3>Hospitality and Public Access</h3>
+            <p>Customer-facing surfaces under ADA expectations, premises liability, and brand standards that rarely include traction performance.</p>
+            <a class="btn-text" data-nav="industries-hosp">Hospitality and Public Access →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Transit Platform / Marine Dock</span></div>
+          <div class="card-body">
+            <h3>Transportation and Infrastructure</h3>
+            <p>Outdoor public surfaces under weather, traffic, and regulatory inspection. Long-life specification on assets the public never thinks about.</p>
+            <a class="btn-text" data-nav="industries-trans">Transportation and Infrastructure →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Where each product fits in your industry</h4>
+      <h2>Both products, four industries.</h2>
+      <p class="lead">Most facilities end up using both ALGRIP® and OnGrip® over time, deployed against different parts of the property. The matrix below shows where each one tends to do its best work.</p>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Industry</th>
+            <th>ALGRIP®</th>
+            <th>OnGrip®</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Food and Beverage</th>
+            <td>New construction, line replacements, and capital projects. Specified into floors, walkways, and stair treads that have to perform across years of washdown.</td>
+            <td>Targeted upgrades in problem zones while production is running. The remediation answer for incidents, audit findings, and pre-renewal upgrades.</td>
+          </tr>
+          <tr>
+            <th>Manufacturing</th>
+            <td>New equipment lines, expansions, and floor replacements. Specified into surfaces that have to survive forklift traffic, abrasion, and chemistry over time.</td>
+            <td>In-service upgrades to specific zones like forklift crossings, problem cells, and post-incident areas without taking the line down.</td>
+          </tr>
+          <tr>
+            <th>Hospitality and Public Access</th>
+            <td>New construction, renovations, and brand-standard upgrades. Specified into lobbies, pool decks, stair treads, and back-of-house kitchens.</td>
+            <td>Existing properties dealing with claims, audits, or specific problem zones, applied without taking the space offline.</td>
+          </tr>
+          <tr>
+            <th>Transportation and Infrastructure</th>
+            <td>Capital projects like transit platforms, gangways, ramp landings, and stair treads. Specified into assets that have to last for decades.</td>
+            <td>In-service upgrades to specific zones like platform edges, transitions, and problem stairs without taking the asset offline.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cta-row" style="margin-top: 32px;">
+        <a class="btn btn-primary" data-nav="products">See ALGRIP® and OnGrip® products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist about your industry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: INDUSTRIES. FOOD AND BEVERAGE ===== -->
+<!-- ====================================================== -->
+<div class="page" id="page-industries-fb">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Industries</span>
+      <a data-nav="industries-fb" class="active">Food and Beverage</a>
+      <a data-nav="industries-mfg">Manufacturing</a>
+      <a data-nav="industries-hosp">Hospitality and Public Access</a>
+      <a data-nav="industries-trans">Transportation and Infrastructure</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Industries · Food and Beverage</div>
+          <h1>Traction safety in food and beverage environments.</h1>
+          <p class="hero-subhead">Wet floors, washdown cycles, oils, and continuous production make traction one of the most underestimated risks in food and beverage. It is also one of the most controllable.</p>
+          <p class="hero-body">Few environments test traction more honestly than a food or beverage facility. Treating traction as a sanitation problem misses the point. The right surface, specified correctly, removes a risk that cleaning alone cannot fully solve.</p>
+        </div>
+        <div class="img-placeholder"><span>Food and Beverage Facility · Wet floor / processing area</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Why food and beverage demands an engineered approach</h4>
+      <h2>The structural realities.</h2>
+      <p>Food and beverage environments share a set of conditions that make traction performance hard to negotiate around. Standing water and condensate are part of regular operations. Protein, fat, and oil residues change the friction profile of the floor throughout the day. Washdown cycles introduce additional chemistry on a daily or shift-based cadence. Foot and equipment traffic wears surfaces unevenly. These are not edge cases. They are the everyday operating environment.</p>
+      <h3 style="margin-top: 32px;">Why behavior change alone is not the answer</h3>
+      <p>Footwear policies, signage, housekeeping rounds, and training all matter. They also have limits. In a wet processing environment, disciplined behavior cannot fully overcome a surface that was never specified for the conditions. Engineering controls, including surface selection, sit higher on the hierarchy of controls than behavioral controls for a reason.</p>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where traction decisions most often go wrong</h4>
+      <h2>Five patterns we see repeatedly.</h2>
+      <ol class="numbered">
+        <li><strong>Traction gets left out of the original specification.</strong> Engineering treats the floor as a substrate choice and assumes traction will follow.</li>
+        <li><strong>Sanitation is asked to solve a slip problem it cannot solve.</strong> Cleaning frequency goes up, complaints continue, and the root cause never gets addressed.</li>
+        <li><strong>After an incident, a fast retrofit gets selected on price.</strong> The fix works for a quarter, then ages out under washdown chemistry, leaving the original problem and a depleted budget.</li>
+        <li><strong>Each shift adapts informally.</strong> Mats here, signage there, employee workarounds everywhere. The facility ends up with a patchwork no one fully understands.</li>
+        <li><strong>By the time procurement is involved, the cheapest option looks like the safest one.</strong> It almost never is.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Plant Floor · Drainage / transition zone</span></div>
+        <div>
+          <h4>Designing for traction without disrupting production</h4>
+          <h2>The questions worth answering first.</h2>
+          <ul class="bullets">
+            <li>Which zones actually drive your incidents and complaints, and what do they have in common?</li>
+            <li>Where does washdown chemistry hit the floor, and how does that change friction during and after the cycle?</li>
+            <li>Where are the transitions and grade changes that compound risk? Entrances, ramps, drains, equipment crossovers.</li>
+            <li>What is the realistic downtime window for upgrades, and how should the work be staged?</li>
+            <li>What does a defensible documentation trail look like for the safety team and the insurer?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where each product platform fits</h4>
+      <h2>Most food and beverage facilities end up using both.</h2>
+      <p>They get deployed against different zones and different timelines.</p>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h3>ALGRIP® for the design conversation</h3>
+          <p>Fits when the work is part of a planned design, replacement, or capital project, and consistent surface-integrated traction is required.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>OnGrip® for the live facility</h3>
+          <p>Fits when the facility is in production, the surface is already in place, and traction needs to be elevated without rebuilding the floor.</p>
+        </div></div>
+      </div>
+      <div class="pullquote" style="margin-top: 40px;">In food and beverage, traction is rarely the headline risk on the safety dashboard. It is almost always one of the largest controllable risks underneath the headline.</div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin: 0 auto 24px;">See how ALGRIP® and OnGrip® fit into a food and beverage facility.</h2>
+      <div class="cta-row" style="justify-content: center;">
+        <a class="btn btn-primary" data-nav="products">Explore products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Resources for food and beverage leaders</h4>
+      <h2>Recommended reading.</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h4>Article</h4>
+          <h3>Why cleaning alone does not eliminate slip risk</h3>
+          <p>The limits of sanitation as a slip-prevention strategy in food processing facilities.</p>
+          <div class="resource-meta">For: Safety, Ops · 6 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Guide</h4>
+          <h3>Designing for traction in food and beverage environments</h3>
+          <p>A specifier's framework for treating traction as a design variable instead of a finishing detail.</p>
+          <div class="resource-meta">For: Engineer · 10 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Tool</h4>
+          <h3>Emergency fix vs. planned investment</h3>
+          <p>A side-by-side cost framework for traction retrofits and planned upgrades.</p>
+          <div class="resource-meta">For: Procurement · Calculator</div>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top: 32px;">
+        <a class="btn btn-primary" data-nav="contact">Talk to a specialist about your food and beverage environment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: INDUSTRIES. MANUFACTURING ======== -->
+<!-- ====================================================== -->
+<div class="page" id="page-industries-mfg">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Industries</span>
+      <a data-nav="industries-fb">Food and Beverage</a>
+      <a data-nav="industries-mfg" class="active">Manufacturing</a>
+      <a data-nav="industries-hosp">Hospitality and Public Access</a>
+      <a data-nav="industries-trans">Transportation and Infrastructure</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Industries · Manufacturing</div>
+          <h1>Traction safety in manufacturing environments.</h1>
+          <p class="hero-subhead">Oils, coolants, heavy traffic, and mixed work zones make traction a real engineering problem in manufacturing facilities. The good news is that it is a solvable one.</p>
+          <p class="hero-body">Manufacturing floors take a particular kind of abuse. Lubricants and coolant fluids change the friction profile of the surface from one cell to the next. Forklift traffic and steel-toed boots wear the surface unevenly. Cleaning cycles, weather coming in through bay doors, and the occasional spill all compound the problem. A floor that performs in one zone often fails in another.</p>
+        </div>
+        <div class="img-placeholder"><span>Manufacturing Floor · Cell with oils and traffic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Why manufacturing demands an engineered approach</h4>
+      <h2>The conditions a manufacturing floor actually sees.</h2>
+      <p>Most manufacturing facilities share a set of conditions that single-source flooring rarely handles well. Oils, coolants, and hydraulic fluids are part of normal operations, and they migrate. Forklift and pallet jack traffic abrades the surface in concentrated paths. Welding spatter, paint overspray, and grit from outside loading docks all change surface behavior over time. Different work zones have different conditions, but the same floor often runs through all of them.</p>
+      <h3 style="margin-top: 32px;">Why behavior change alone is not the answer</h3>
+      <p>Spill response programs, footwear policies, and housekeeping rounds all matter. They also have limits. In an environment where contamination is built into normal operations, traction is not a hygiene problem. It is an engineering problem.</p>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where traction decisions most often go wrong</h4>
+      <h2>Five patterns we see in manufacturing.</h2>
+      <ol class="numbered">
+        <li><strong>Traction gets left to the flooring contractor.</strong> Whatever finish the substrate gets is what the facility lives with.</li>
+        <li><strong>Anti-slip mats are deployed as the primary engineering control.</strong> They migrate, wear out, and create their own trip hazards.</li>
+        <li><strong>Spill response is asked to solve a leak problem.</strong> The leak is the engineering issue. The slip is the symptom.</li>
+        <li><strong>Behavioral training carries the weight of preventing slips the surface should be handling.</strong> OSHA does not see it that way, and neither does a jury.</li>
+        <li><strong>Capital projects upgrade equipment but not the floor underneath it.</strong> New cell, same surface, same problem.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Manufacturing Floor · Forklift / pedestrian intersection</span></div>
+        <div>
+          <h4>Designing for traction across mixed work zones</h4>
+          <h2>The questions worth answering first.</h2>
+          <ul class="bullets">
+            <li>Where do your incidents actually cluster? Specific cells, transitions, loading areas?</li>
+            <li>Where are oils and coolants migrating beyond the equipment they came from?</li>
+            <li>Where are the forklift and pedestrian crossings, and what is the floor condition at those intersections?</li>
+            <li>What is the realistic upgrade window? Planned downtime, weekends, equipment moves?</li>
+            <li>What standards alignment and documentation does your safety team need on file?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where each product platform fits</h4>
+      <h2>Manufacturing facilities often need both.</h2>
+      <p>The two product platforms cover different sides of the same problem.</p>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h3>ALGRIP® for new lines and replacements</h3>
+          <p>Fits when a capital project, equipment move, or floor replacement is on the schedule. Useful where consistent surface-integrated traction is required across the life of the asset.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>OnGrip® for the live floor</h3>
+          <p>Fits when production is running and traction needs to be elevated in specific zones without taking down the line. Useful for problem corners, transitions, and post-incident upgrades.</p>
+        </div></div>
+      </div>
+      <div class="pullquote" style="margin-top: 40px;">In manufacturing, traction is rarely treated as engineering. It is treated as cleanup. The performance gap between those two approaches is the whole point.</div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin: 0 auto 24px;">See how ALGRIP® and OnGrip® fit into a manufacturing facility.</h2>
+      <div class="cta-row" style="justify-content: center;">
+        <a class="btn btn-primary" data-nav="products">Explore products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Resources for manufacturing leaders</h4>
+      <h2>Recommended reading.</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h4>Article</h4>
+          <h3>OSHA exposure and the hierarchy of controls</h3>
+          <p>Why engineering controls outperform behavioral controls in slip prevention, and what that means for citations.</p>
+          <div class="resource-meta">For: Safety · 7 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Guide</h4>
+          <h3>Designing for traction across mixed work zones</h3>
+          <p>How to specify traction across a manufacturing facility where every cell has a different operating reality.</p>
+          <div class="resource-meta">For: Engineer · 9 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Tool</h4>
+          <h3>Planning traction upgrades around production downtime</h3>
+          <p>A staging framework for elevating traction without taking the line offline.</p>
+          <div class="resource-meta">For: Ops · Worksheet</div>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top: 32px;">
+        <a class="btn btn-primary" data-nav="contact">Talk to a specialist about your facility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: INDUSTRIES. HOSPITALITY ========== -->
+<!-- ====================================================== -->
+<div class="page" id="page-industries-hosp">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Industries</span>
+      <a data-nav="industries-fb">Food and Beverage</a>
+      <a data-nav="industries-mfg">Manufacturing</a>
+      <a data-nav="industries-hosp" class="active">Hospitality and Public Access</a>
+      <a data-nav="industries-trans">Transportation and Infrastructure</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Industries · Hospitality and Public Access</div>
+          <h1>Traction safety in hospitality and public-access environments.</h1>
+          <p class="hero-subhead">Hotels, restaurants, retail, and event venues face a different kind of traction problem. Their floors have to perform, hold up to ADA expectations, and still look like part of the brand.</p>
+          <p class="hero-body">When a customer slips in your lobby, it is not just an injury. It is a claim, a review, and an underwriter conversation that will follow you into your next renewal. Traction in hospitality and public-access settings is rarely just about safety. It is about defensibility, brand experience, and operating cost over the life of the property.</p>
+        </div>
+        <div class="img-placeholder"><span>Hotel Lobby / Retail Floor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Why hospitality and public access need an engineered approach</h4>
+      <h2>The realities of a customer-facing surface.</h2>
+      <p>Hospitality and public-access environments share a set of conditions that put traction on a particularly visible stage. Footwear is uncontrolled. Foot traffic is high and unpredictable. Outdoor-to-indoor transitions move water onto interior surfaces with every weather event. Mixed flooring materials (tile, polished concrete, terrazzo, wood) all behave differently when wet. Aesthetic expectations are higher than in most industrial settings, so a surface that performs but looks wrong tends to get replaced anyway.</p>
+      <h3 style="margin-top: 32px;">ADA defensibility and public liability</h3>
+      <p>Public-access surfaces sit at the intersection of ADA expectations, local building codes, and general premises liability. The defensible answer in this category is rarely the cheapest surface that passes inspection on the day it was installed. It is the surface that still performs and still tells a clear story when an incident is investigated two years later.</p>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where traction decisions most often go wrong</h4>
+      <h2>Five patterns we see in hospitality and public access.</h2>
+      <ol class="numbered">
+        <li><strong>Aesthetics drive specification and traction is treated as a separate, lesser problem.</strong> The result is a floor that looks good and performs poorly under realistic conditions.</li>
+        <li><strong>Anti-slip mats and signage are the engineering control.</strong> Both depend on staff to be effective, and both create their own liability.</li>
+        <li><strong>Pool decks, kitchens, and entrances are treated as a single problem with a single solution.</strong> They are different problems and need to be specified that way.</li>
+        <li><strong>After a slip incident, a coating is sprayed over the existing surface.</strong> It wears, fails, and the original problem returns.</li>
+        <li><strong>The brand standard never includes traction performance.</strong> Each property handles it differently, and the chain ends up with the risk profile of its worst-prepared location.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Pool Deck · BOH Kitchen · Entry Transition</span></div>
+        <div>
+          <h4>Designing for traction in customer-facing spaces</h4>
+          <h2>The questions worth answering first.</h2>
+          <ul class="bullets">
+            <li>Where do your slip incidents actually happen? Entrances, restrooms, pool decks, BOH kitchens, stairs?</li>
+            <li>Which surfaces look right but perform poorly under real-world conditions?</li>
+            <li>Where do customers transition from outdoor to indoor, and what does that surface do during weather events?</li>
+            <li>What documentation does your insurance and legal team need to see on file?</li>
+            <li>How does traction fit into the brand and design standard rather than living outside of it?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where each product platform fits</h4>
+      <h2>Two product platforms for very different kinds of spaces.</h2>
+      <p>Most hospitality programs end up using both, sometimes within the same property.</p>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h3>ALGRIP® for the spaces you build</h3>
+          <p>Lobbies, pool decks, stair treads, and back-of-house kitchens being designed or replaced. Built into the surface so traction becomes part of the brand standard rather than a separate spec.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>OnGrip® for the spaces you operate</h3>
+          <p>Existing properties dealing with emerging traction issues, post-incident upgrades, or targeted improvements to specific zones without taking the space offline.</p>
+        </div></div>
+      </div>
+      <div class="pullquote" style="margin-top: 40px;">In hospitality, the surface is part of the experience. Treating traction as an engineering problem makes the experience defensible too.</div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin: 0 auto 24px;">See how ALGRIP® and OnGrip® fit into a hospitality or public-access property.</h2>
+      <div class="cta-row" style="justify-content: center;">
+        <a class="btn btn-primary" data-nav="products">Explore products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Resources for hospitality leaders</h4>
+      <h2>Recommended reading.</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h4>Article</h4>
+          <h3>ADA, premises liability, and proactive specification</h3>
+          <p>What the defensibility math actually looks like, and where it breaks down.</p>
+          <div class="resource-meta">For: Owner, Safety · 7 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Guide</h4>
+          <h3>Pool decks and wet-area zones</h3>
+          <p>Where the failures actually happen, and how to specify around them.</p>
+          <div class="resource-meta">For: Engineer, Ops · 9 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Tool</h4>
+          <h3>Brand standards that include traction performance</h3>
+          <p>A starter framework for adding traction to the brand and design standard.</p>
+          <div class="resource-meta">For: Owner, Design · Template</div>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top: 32px;">
+        <a class="btn btn-primary" data-nav="contact">Talk to a specialist about your property</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: INDUSTRIES. TRANSPORTATION ======= -->
+<!-- ====================================================== -->
+<div class="page" id="page-industries-trans">
+
+  <div class="subnav">
+    <div class="subnav-row">
+      <span class="subnav-label">Industries</span>
+      <a data-nav="industries-fb">Food and Beverage</a>
+      <a data-nav="industries-mfg">Manufacturing</a>
+      <a data-nav="industries-hosp">Hospitality and Public Access</a>
+      <a data-nav="industries-trans" class="active">Transportation and Infrastructure</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Industries · Transportation and Infrastructure</div>
+          <h1>Traction safety in transportation and infrastructure.</h1>
+          <p class="hero-subhead">Train platforms, bus stations, airport walkways, marine decks, parking structures. The surfaces where the public moves under every kind of weather condition there is.</p>
+          <p class="hero-body">Transportation and infrastructure environments share a particular challenge. The surface has to perform outdoors, year-round, under public traffic the operator has no control over. Specification mistakes do not surface as customer complaints. They surface as injury claims, regulatory inspections, and headlines.</p>
+        </div>
+        <div class="img-placeholder"><span>Transit Platform / Marine Gangway</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Why transportation needs an engineered approach</h4>
+      <h2>The conditions outdoor public surfaces actually face.</h2>
+      <p>Outdoor and semi-outdoor public surfaces share a set of conditions that defeat most off-the-shelf options. Freeze-thaw cycles attack adhesive layers and applied coatings. UV exposure changes how a surface looks and performs over time. Ice, snow, and de-icing chemistry add chemical exposure to mechanical wear. Foot traffic concentrates on stairs, ramps, platform edges, and access points. The same surface has to handle peak volume and low-light early-morning conditions, every day, for years.</p>
+      <h3 style="margin-top: 32px;">Standards, inspections, and the regulatory layer</h3>
+      <p>Transportation environments tend to be heavily inspected. DOT, FAA, FRA, USCG, port authorities, or local transit agencies all touch different assets. A defensible traction approach is not just about passing today's inspection. It is about a documented decision logic that holds up when the same surface gets inspected by a different agency three years from now.</p>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where traction decisions most often go wrong</h4>
+      <h2>Five patterns we see in transportation and infrastructure.</h2>
+      <ol class="numbered">
+        <li><strong>Anti-slip tape is treated as a primary engineering control.</strong> It peels, wears, and creates trip hazards of its own.</li>
+        <li><strong>The surface gets replaced after every incident.</strong> What it should get is an upgrade against the condition that caused the incident.</li>
+        <li><strong>Transitions between surfaces are specified separately from the main surface.</strong> Platform edges, gangways, ramp landings. They rarely match in performance.</li>
+        <li><strong>UV and freeze-thaw exposure are treated as inevitable rather than as specifiable design conditions.</strong> They are not inevitable. They are predictable.</li>
+        <li><strong>Maintenance contracts cover cleaning, not surface performance.</strong> The original specification is rarely defended over time.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div class="img-placeholder"><span>Platform Edge / Gangway / Stair Landing</span></div>
+        <div>
+          <h4>Designing for traction in outdoor and public environments</h4>
+          <h2>The questions worth answering first.</h2>
+          <ul class="bullets">
+            <li>Which assets are most exposed to weather, ice, and de-icing chemistry?</li>
+            <li>Where are the highest-volume foot traffic zones during peak operating periods?</li>
+            <li>What is the inspection and documentation profile for the agencies that touch this asset?</li>
+            <li>What is the realistic maintenance and replacement cycle for the current surface?</li>
+            <li>Which transitions between surfaces are creating mismatched traction performance?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Where each product platform fits</h4>
+      <h2>Transportation assets often use both.</h2>
+      <p>Capital and operating budgets are different problems. The product platforms cover both.</p>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h3>ALGRIP® for new builds and capital projects</h3>
+          <p>Built for the long-life performance public infrastructure requires. Platforms, stair treads, gangways, and access points specified as part of the asset itself.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h3>OnGrip® for in-service upgrades</h3>
+          <p>Targeted improvement to specific zones (platform edges, transitions, problem stairs) without taking the asset offline or rebuilding from scratch.</p>
+        </div></div>
+      </div>
+      <div class="pullquote" style="margin-top: 40px;">In transportation, the surface is doing safety work the public never sees. The cost of getting it wrong is the only time anyone notices.</div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin: 0 auto 24px;">See how ALGRIP® and OnGrip® fit into a transit, transportation, or marine asset.</h2>
+      <div class="cta-row" style="justify-content: center;">
+        <a class="btn btn-primary" data-nav="products">Explore products</a>
+        <a class="btn" data-nav="contact">Talk to a specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Resources for transportation leaders</h4>
+      <h2>Recommended reading.</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h4>Article</h4>
+          <h3>Designing for weather</h3>
+          <p>UV, freeze-thaw, and traction performance over the life of a public surface.</p>
+          <div class="resource-meta">For: Engineer · 8 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Guide</h4>
+          <h3>Public-access defensibility</h3>
+          <p>Standards, documentation, and the inspection trail across agencies.</p>
+          <div class="resource-meta">For: Safety, Engineer · 10 min read</div>
+        </div>
+        <div class="resource-card">
+          <h4>Tool</h4>
+          <h3>Capital planning for traction infrastructure</h3>
+          <p>Treating traction as part of the asset, not part of maintenance.</p>
+          <div class="resource-meta">For: Procurement, Ops · Framework</div>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top: 32px;">
+        <a class="btn btn-primary" data-nav="contact">Talk to a specialist about your asset</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: RESOURCES ======================= -->
+<!-- ====================================================== -->
+<div class="page" id="page-resources">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Resources</div>
+          <h1>Resources for teams thinking about traction differently.</h1>
+          <p class="hero-subhead">Guides, frameworks, and case studies for safety leaders, engineers, and operators who want to specify traction with confidence.</p>
+          <p class="hero-body">Every resource here is written to be useful. The goal is to help your team think clearly about a real decision, justify it internally, or communicate it across functions.</p>
+        </div>
+        <div class="img-placeholder"><span>Editorial Image · Library / reading context</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Filter by role</h4>
+      <div class="chip-row">
+        <span class="chip active">All</span>
+        <span class="chip">Safety and EHS</span>
+        <span class="chip">Engineering</span>
+        <span class="chip">Operations</span>
+        <span class="chip">Procurement</span>
+        <span class="chip">Executive</span>
+      </div>
+      <h4>Filter by industry</h4>
+      <div class="chip-row">
+        <span class="chip active">All</span>
+        <span class="chip">Food and Beverage</span>
+        <span class="chip">Manufacturing</span>
+        <span class="chip">Hospitality and Public Access</span>
+        <span class="chip">Transportation and Infrastructure</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>Featured</h4>
+      <h2>Pillar resources.</h2>
+      <div class="card-grid-3">
+        <div class="card">
+          <div class="img-placeholder"><span>Pillar Article Cover</span></div>
+          <div class="card-body">
+            <h4>Pillar Education</h4>
+            <h3>Why traction safety should be part of the design conversation.</h3>
+            <p>The category reframe. Written for Safety, Engineering, and Operations leaders at the Awareness or Consideration stage.</p>
+            <div class="resource-meta">8 min read</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Industry Pillar Cover</span></div>
+          <div class="card-body">
+            <h4>Industry Pillar</h4>
+            <h3>Designing for traction in food and beverage environments.</h3>
+            <p>The full food and beverage framework for safety and operations leaders. Consideration stage.</p>
+            <div class="resource-meta">10 min read</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-placeholder"><span>Decision Support Cover</span></div>
+          <div class="card-body">
+            <h4>Decision Support</h4>
+            <h3>How to compare engineered traction surfaces.</h3>
+            <p>A defensible evaluation framework for engineers and procurement leaders. Decision stage.</p>
+            <div class="resource-meta">6 min read</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Library</h4>
+      <h2>All resources.</h2>
+      <div class="resource-grid">
+        <div class="resource-card"><h4>Article · Safety</h4><h3>The hidden cost of last-minute safety retrofits.</h3><p>What late-stage traction decisions cost financially, operationally, and reputationally.</p><div class="resource-meta">Awareness · 5 min</div></div>
+        <div class="resource-card"><h4>Guide · Engineering</h4><h3>When traction belongs in the base spec.</h3><p>A practical framework for treating traction as a design variable.</p><div class="resource-meta">Consideration · 9 min</div></div>
+        <div class="resource-card"><h4>Checklist · Ops</h4><h3>Phasing traction upgrades without shutting down production.</h3><p>A downloadable checklist for operations leaders managing live facilities.</p><div class="resource-meta">Consideration · PDF</div></div>
+        <div class="resource-card"><h4>Tool · Procurement</h4><h3>Emergency fix vs. planned investment.</h3><p>What late retrofits actually cost over a five-year horizon.</p><div class="resource-meta">Decision · Calculator</div></div>
+        <div class="resource-card"><h4>Article · Ops</h4><h3>Training vs. engineering controls.</h3><p>What actually reduces slips, and where each approach hits its limits.</p><div class="resource-meta">Awareness · 6 min</div></div>
+        <div class="resource-card"><h4>Standards · Safety</h4><h3>OSHA, ANSI, ASTM, ADA. A defensible reference.</h3><p>The standards that matter most, written for the people who have to defend the decision.</p><div class="resource-meta">Reference</div></div>
+        <div class="resource-card"><h4>Article · Manufacturing</h4><h3>OSHA exposure and the hierarchy of controls.</h3><p>Why engineering controls outperform behavioral controls in slip prevention, and what that means for citations.</p><div class="resource-meta">Manufacturing · 7 min</div></div>
+        <div class="resource-card"><h4>Guide · Hospitality</h4><h3>Pool decks and wet-area zones.</h3><p>Where the failures actually happen, and how to specify around them.</p><div class="resource-meta">Hospitality · 9 min</div></div>
+        <div class="resource-card"><h4>Tool · Transportation</h4><h3>Capital planning for traction infrastructure.</h3><p>Treating traction as part of the asset, not part of maintenance.</p><div class="resource-meta">Transportation · Framework</div></div>
+      </div>
+
+      <h4 style="margin-top: 48px;">If something already happened</h4>
+      <h2 style="font-size: 28px;">Reactive-stage resources.</h2>
+      <p>For teams in the middle of a slip-and-fall claim, an OSHA citation, an insurance renewal, or another time-sensitive trigger. Written to help you respond defensibly without overcommitting to a fix that ages out next year.</p>
+      <div class="resource-grid">
+        <div class="resource-card"><h4>Guide · Safety, Owner</h4><h3>What to do in the first 30 days after a slip-and-fall claim.</h3><p>A short, role-aware sequence for the moment after an incident. What gets documented, who gets briefed, and what does not get said.</p><div class="resource-meta">Reactive · 7 min</div></div>
+        <div class="resource-card"><h4>Guide · Safety, Engineer</h4><h3>Responding to an OSHA traction-related citation.</h3><p>How to scope a corrective action that holds up under follow-up inspection. Without overspending, and without setting up the next citation.</p><div class="resource-meta">Reactive · 8 min</div></div>
+        <div class="resource-card"><h4>Guide · Owner, Procurement</h4><h3>Briefing your insurer on a traction upgrade before renewal.</h3><p>What underwriters want to see in writing, and what makes a traction upgrade actually move the renewal conversation.</p><div class="resource-meta">Reactive · 6 min</div></div>
+        <div class="resource-card"><h4>Checklist · Safety, Owner</h4><h3>Defensible documentation after a public-access slip incident.</h3><p>A downloadable checklist for what to capture, when, and how it gets stored so the record holds up two years from now.</p><div class="resource-meta">Reactive · PDF</div></div>
+      </div>
+
+      <h4 style="margin-top: 48px;">For insurance and risk audiences</h4>
+      <h2 style="font-size: 28px;">Resources for underwriters and risk engineers.</h2>
+      <p>Insurance underwriters and risk engineers shape what gets specified after an incident. These resources are written for them, so the criteria they use to evaluate traction reflect engineered standards rather than commodity ones.</p>
+      <div class="resource-grid">
+        <div class="resource-card"><h4>Reference · Insurance, Owner</h4><h3>How risk engineers evaluate traction at site inspection.</h3><p>A look at the criteria that drive a favorable site survey, and where engineered traction surfaces meaningfully change the inspection outcome.</p><div class="resource-meta">Underwriter · 8 min</div></div>
+        <div class="resource-card"><h4>Tool · Insurance, Safety</h4><h3>A traction questionnaire for your next site survey.</h3><p>A worksheet underwriters and risk engineers can use to assess traction defensibility at any insured location.</p><div class="resource-meta">Underwriter · Worksheet</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-band">
+    <div class="narrow">
+      <h4 style="color:#999;">The TSP Brief</h4>
+      <h2>The only traction email worth reading.</h2>
+      <p>Short, useful, and infrequent. The kind of email you actually open.</p>
+      <form class="nl-form" onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Work email" />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: ABOUT =========================== -->
+<!-- ====================================================== -->
+<div class="page" id="page-about">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">About</div>
+          <h1>Our job is to move traction safety upstream.</h1>
+          <p class="hero-subhead">Traction Safety Products is the brand for design, safety, and operations leaders who want to address traction before incidents force the conversation.</p>
+          <p class="hero-body">Most traction safety conversations happen too late. They are framed as a response to something that already went wrong. We built this brand to change when those conversations start.</p>
+        </div>
+        <div class="img-placeholder"><span>Brand Image · Team / facility / fabrication</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h4>Where we came from</h4>
+          <h2>Built around products that have earned their place.</h2>
+          <p>ALGRIP® and OnGrip® have been engineered into industrial floors, public-access surfaces, and infrastructure assets for years. They earned a reputation in the industries that used them, and that reputation outgrew the original architecture.</p>
+          <h3 style="margin-top: 32px;">Why the brand exists</h3>
+          <p>Traction safety is its own category. It needed its own voice, its own point of view, and its own long-term partner for safety, engineering, and operations teams. TSP is that partner. The products that sit behind it have a track record on the floor that the brand is built to extend.</p>
+        </div>
+        <div class="img-placeholder img-tall"><span>Origin Story Image · Manufacturing heritage</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>What we believe about traction</h4>
+      <h2>Four ideas that shape everything we do.</h2>
+      <div class="card-grid-2">
+        <div class="card"><div class="card-body">
+          <h4>01</h4>
+          <h3>Traction is a performance variable.</h3>
+          <p>Not just a safety statistic. Traction affects productivity, uptime, and operational confidence. Treating it that way changes the conversation.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h4>02</h4>
+          <h3>Safety starts before incidents.</h3>
+          <p>The best safety outcomes get designed in, not retrofitted under pressure. Earlier decisions tend to create better outcomes at lower total cost.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h4>03</h4>
+          <h3>Real environments need engineered solutions.</h3>
+          <p>Wet, greasy, washdown, and high-traffic conditions defeat surfaces that were never built for them.</p>
+        </div></div>
+        <div class="card"><div class="card-body">
+          <h4>04</h4>
+          <h3>Clarity beats complexity.</h3>
+          <p>Traction safety is not as complicated as the late-stage version of the conversation tends to feel. Earlier education makes better decisions easier.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <h4>Our values</h4>
+      <h2>What we stand for.</h2>
+      <p class="lead">The brand is built on engineered products that hold up, customer relationships that last, and a quiet kind of pride in the work. Those values shape every traction conversation we have.</p>
+      <div style="margin-top: 40px;">
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid #000;">
+          <div style="font-weight: 900; font-size: 32px;">01</div>
+          <div>
+            <h3>Safety as the first principle.</h3>
+            <p>Every TSP product starts with the question of whether it leaves a facility, a job site, or a public space safer than it was. If it does not, it is not a product we ship.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid #000;">
+          <div style="font-weight: 900; font-size: 32px;">02</div>
+          <div>
+            <h3>Engineering before marketing.</h3>
+            <p>Performance claims are backed by manufacturing, testing, and the conditions a surface will actually see. We document the work and stand behind the documentation.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid #000;">
+          <div style="font-weight: 900; font-size: 32px;">03</div>
+          <div>
+            <h3>Reliability across the life of the asset.</h3>
+            <p>A traction surface has to perform on day one, year five, and year fifteen. We design and document for that horizon, not for the install date.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid #000; border-bottom: 1px solid #000;">
+          <div style="font-weight: 900; font-size: 32px;">04</div>
+          <div>
+            <h3>Long relationships over single orders.</h3>
+            <p>The work goes better when we are still talking to the same customer a decade from now. We make recommendations accordingly, including the ones that do not maximize the current quote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>How we work with you</h4>
+      <h2>We start where you start.</h2>
+      <p>Most teams that engage with us are not coming with a product question. They are coming with a problem, a project, a recent incident, or a conversation that surfaced traction as the next thing to solve. We start there. From the conditions on your floor, the timeline you are working against, and the people who need to sign off on the decision, we work backward to the right product, the right specification, and the right documentation. Sometimes that is ALGRIP®. Sometimes it is OnGrip®. Sometimes it is a combination, deployed in phases. Whatever the answer turns out to be, you will hear it from us straight.</p>
+      <div class="cta-row" style="margin-top: 24px;">
+        <a class="btn btn-primary" data-nav="contact">Talk to us</a>
+        <a class="btn" data-nav="traction">Read our POV first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site-wide Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div class="contact-cta-text">
+          <h4>Get in touch</h4>
+          <h2>Have a project, a question, or an incident?</h2>
+          <p>Tell us where you are. A specialist replies within one business day.</p>
+        </div>
+        <form class="contact-cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-row">
+            <label>Why are you contacting us?</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>I want to learn more</option>
+              <option>I'm scoping a project</option>
+              <option>Responding to an incident</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Tell us more</label>
+            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ====================================================== -->
+<!-- ============== PAGE: CONTACT ========================= -->
+<!-- ====================================================== -->
+<div class="page" id="page-contact">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h1>Tell us about your project. Or just your problem.</h1>
+          <p class="hero-subhead">Whether you are scoping a new facility, responding to an audit, or working through your options, we can help you think clearly about traction.</p>
+          <p class="hero-body">Most of the conversations we have do not start with a product question. They start with a project, a recent incident, or a budget discussion that surfaced traction as an open item. Tell us where you are, and we will meet you there.</p>
+        </div>
+        <div class="img-placeholder"><span>Contact Image · Specialist / consultation context</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <form class="contact-form" onsubmit="event.preventDefault();">
+        <div class="form-row">
+          <label>Name</label>
+          <input type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-row">
+          <label>Why are you contacting us?</label>
+          <select required>
+            <option value="">Select one</option>
+            <option>I want to learn more</option>
+            <option>I'm scoping a project</option>
+            <option>Responding to an incident</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Tell us more</label>
+          <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="page-section alt">
+    <div class="container">
+      <h4>What happens next</h4>
+      <h2>You will hear back within one business day.</h2>
+      <p>We acknowledge the message, route it to the right specialist, and reply with the right next step. If you are responding to an incident, the message gets flagged for faster handling internally. If you are scoping a project, a specialist follows up to schedule a conversation. If you are learning more, you will get a short reading list pointed at your role and your industry.</p>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Traction Safety Products</h4>
+        <p>Engineered traction surfaces for the floors, walkways, and access points where slips happen most often.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a data-nav="home">Home</a></li>
+          <li><a data-nav="traction">Why Traction</a></li>
+          <li><a data-nav="products">Products</a></li>
+          <li><a data-nav="industries">Industries</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul>
+          <li><a data-nav="industries-fb">Food and Beverage</a></li>
+          <li><a data-nav="industries-mfg">Manufacturing</a></li>
+          <li><a data-nav="industries-hosp">Hospitality and Public Access</a></li>
+          <li><a data-nav="industries-trans">Transportation and Infrastructure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a data-nav="resources">Resources</a></li>
+          <li><a data-nav="about">About</a></li>
+          <li><a data-nav="contact">Contact</a></li>
+          <li><a>LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Traction Safety Products</span>
+      <span>ALGRIP® and OnGrip® are registered trademarks.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple page switcher
+  // Top-level nav id mapping: child industry pages keep "Industries" highlighted in the top nav.
+  const topNavMap = {
+    "industries-fb": "industries",
+    "industries-mfg": "industries",
+    "industries-hosp": "industries",
+    "industries-trans": "industries",
+    "products-algrip": "products",
+    "products-ongrip": "products",
+  };
+
+  document.addEventListener("click", function (e) {
+    const target = e.target.closest("[data-nav]");
+    if (!target) return;
+    const id = target.getAttribute("data-nav");
+    if (!id) return;
+    e.preventDefault();
+
+    // Update top-nav active state
+    document.querySelectorAll("nav.primary a").forEach(a => a.classList.remove("active"));
+    const topId = topNavMap[id] || id;
+    const navLink = document.querySelector(`nav.primary a[data-nav="${topId}"]`);
+    if (navLink) navLink.classList.add("active");
+
+    // Show page
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    const page = document.getElementById("page-" + id);
+    if (page) {
+      page.classList.add("active");
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  });
+</script>
+</body>
+</html>
