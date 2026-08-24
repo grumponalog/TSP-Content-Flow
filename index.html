@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Traction Safety Products. Site Mockup.</title>
+<title>Traction Safety Products. Content Flow v2.3.</title>
 <style>
   /* ---------- Reset / Base ---------- */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,14 +23,38 @@
   .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
   .narrow { max-width: 820px; margin: 0 auto; padding: 0 32px; }
 
+  /* ---------- Open Items / NEEDS INFO ---------- */
+  .needs-info {
+    display: inline-block;
+    background: #fff;
+    border: 1px dashed #000;
+    padding: 2px 8px;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  td .needs-info, li .needs-info { margin-top: 0; }
+  .open-item-note {
+    border-left: 3px solid #000;
+    background: #f4f4f4;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .open-item-note strong { text-transform: uppercase; letter-spacing: 0.06em; font-size: 12px; display: block; margin-bottom: 4px; }
+
   /* ---------- Mockup Banner ---------- */
   .mockup-banner {
     background: #000;
     color: #fff;
     text-align: center;
     padding: 8px 16px;
-    font-size: 12px;
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
@@ -709,7 +733,65 @@
 </head>
 <body>
 
-<div class="mockup-banner">Mockup · Visual placeholder only · Black and White draft</div>
+<!--
+================================================================================
+TSP WEBSITE CONTENT FLOW - v2.3
+Built 2026-08-24 by Auto Josh. Predecessor: v1 (this file, as deployed).
+ClickUp: 86ak521ex  |  Related: 86ahwa8pr, 86ah1dt4j, 86ajdnwrx
+
+WHY THIS VERSION EXISTS
+Jeremy Chupp's Filestage REVISE annotation, verbatim:
+  "We do not apply OnGrip to existing surfaces or flooring that is already
+   in place. We can apply OnGrip to plate and grating."
+v1 was built on an ALGRIP-for-new-builds / OnGrip-for-retrofits split. That
+split is false. It was load-bearing across 9 of 13 pages.
+
+CORRECTED PRODUCT TRUTH (sources: Jeremy Chupp + Amy Ludwig Filestage
+annotations 7/7; Kevin via Amy 6/3; all captured in ClickUp 86ahwa8pr)
+  - Both products are complete, factory-manufactured solutions. Specified
+    and fabricated from the start. Neither is aftermarket. Neither is a
+    coating. Neither goes onto flooring already in place.
+  - Both are applied to plate and grating during fabrication.
+  - ALGRIP  = raised metal dots. Easier to clean. Leads in Food & Beverage
+              and powder / wet-spill washdown environments.
+  - OnGrip  = spray-applied metal grit. "Like sandpaper, but with the
+              durability of metal." Harder to clean.
+  - Both permanent under heavy traffic, unlike epoxy aggregate or paint.
+
+WHAT CHANGED
+  1. New-build-vs-retrofit axis removed everywhere. Replaced with texture
+     and cleanability, which is the real difference.
+  2. Products-hub comparison table rebuilt: Texture / Underfoot / Cleaning /
+     Leads in. Dropped "Project stage" and "Surface relationship".
+  3. OnGrip page rewritten. Hero, how-it-works, substrates, when-to-specify,
+     why-teams-choose all rebuilt on the manufactured-in truth.
+  4. ALGRIP page leads with the cleanability differentiator.
+  5. Incident-response layer removed: reactive-stage resource block, the
+     "Responding to an incident" contact option (13x), the "or an incident?"
+     CTA heading (12x).
+  6. Industries product-fit matrix and all four industry product-fit blocks
+     rebuilt. OnGrip column intentionally blank pending OGI.
+  7. "Thermal metal spray" removed - unconfirmed by any OGI source.
+
+OPEN ITEMS - 6. Search this file for "NEEDS INFO" and "open-item-note".
+  1. Where OnGrip is the first choice. THE blocker. Releases 86ah1dt4j.
+  2. The common thread across OnGrip's industry list, in OGI's words.
+  3. Confirm the OnGrip process name (spray-applied grit vs thermal spray).
+  4. Whether the incident-response removal is total.
+  5. Whether the underwriter / risk-engineer audience block survives it.
+  6. Indoor/outdoor reclassification - listed as a v2.2 global change, specs
+     live only in the Google Doc. NOT applied here.
+
+PROVENANCE WARNING
+This is a v2.2-INFORMED REBUILD, not a transcription of v2.2. The Drive doc
+(docs.google.com/document/d/184p8qebdoq9JJTe_URb_ZFMFEvo-simvAFlZg0rKkVg)
+was out of connector scope for the session that built this. Product truth is
+sourced from the ClickUp record and is correct. The SENTENCES ARE NEWLY
+WRITTEN and have not been reconciled against v2.2's approved copy.
+Reconcile before this reaches OGI.
+================================================================================
+-->
+<div class="mockup-banner">Content Flow v2.3 · 2026-08-24 · OGI Filestage revisions applied · Visual placeholder only · 6 open items</div>
 
 <!-- ========== HEADER ========== -->
 <header class="site-header">
@@ -743,7 +825,7 @@
           <div class="eyebrow">Traction Safety Products</div>
           <h1>We engineer the surfaces that prevent slips and falls.</h1>
           <p class="hero-subhead">Traction surfaces built for the floors, walkways, and access points where falls happen most often.</p>
-          <p class="hero-body">Most slip-and-fall incidents trace back to a surface that was never built for the conditions it ended up in. We design and manufacture traction surfaces that prevent those incidents. We work with teams designing new surfaces and with teams fixing the ones already on the floor.</p>
+          <p class="hero-body">Most slip-and-fall incidents trace back to a surface that was never built for the conditions it ended up in. We engineer and manufacture the surface itself, specified for those conditions before it is ever installed.</p>
           <div class="cta-row">
             <a class="btn btn-primary" data-nav="products">Explore our products</a>
             <a class="btn" data-nav="contact">Talk to a specialist</a>
@@ -760,21 +842,21 @@
     <div class="container">
       <h4>What we do</h4>
       <h2>We engineer traction surfaces for real environments.</h2>
-      <p class="lead">We make two products that prevent slips and falls. ALGRIP® builds traction directly into the surface itself, used when you are designing or replacing the surface. OnGrip® applies engineered traction to a surface that is already in place. Both keep people upright on floors that would otherwise be too wet, oily, or worn to be safe.</p>
+      <p class="lead">We make two products that prevent slips and falls. Both are manufactured into the surface itself, specified and fabricated before anything reaches the floor. ALGRIP® raises metal dots that grip the sole of a shoe and clean easily enough for daily washdown. OnGrip® applies a metal grit with the bite of coarse sandpaper. Neither is a coating, and neither goes onto a floor already in place.</p>
       <div class="card-grid-3">
         <div class="card">
           <div class="img-placeholder"><span>ALGRIP® Detail Photo</span></div>
           <div class="card-body">
-            <h3>Surface-integrated traction</h3>
-            <p>ALGRIP® bonds traction directly into the surface itself. Built for new installations, replacements, and the high-demand areas where performance has to stay consistent over time.</p>
+            <h3>Raised dot traction</h3>
+            <p>ALGRIP® bonds raised metal dots into plate and grating. The texture grips the sole of a shoe without trapping residue, which is why it leads in food and beverage and anywhere the floor gets washed down.</p>
             <a class="btn-text" data-nav="products-algrip">Learn about ALGRIP® →</a>
           </div>
         </div>
         <div class="card">
           <div class="img-placeholder"><span>OnGrip® Application Photo</span></div>
           <div class="card-body">
-            <h3>Applied traction for existing surfaces</h3>
-            <p>OnGrip® delivers traction performance on surfaces that are already in service. Useful for staged retrofits, specific problem zones, and conditions that change over time.</p>
+            <h3>Spray-applied grit traction</h3>
+            <p>OnGrip® applies a metal grit texture to plate and grating during fabrication. Coarse, multidirectional bite that stays put under heavy traffic. <span class="needs-info">[NEEDS INFO] Where OnGrip® is the first choice, in OGI's words. Awaiting Kevin / Jeremy.</span></p>
             <a class="btn-text" data-nav="products-ongrip">Learn about OnGrip® →</a>
           </div>
         </div>
@@ -878,7 +960,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -896,12 +978,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -958,7 +1040,7 @@
         <div>
           <h4>What "engineered traction" actually means</h4>
           <h2>Engineered, not improvised.</h2>
-          <p>Traction has to be engineered for the conditions a surface will actually see, the same way you would engineer load or span. That can mean a surface where traction is bonded directly into the material itself (ALGRIP®). It can also mean an engineered traction layer applied to an existing surface (OnGrip®). What it should not mean is hoping a generic finish, an off-the-shelf coating, or a housekeeping policy will make a slippery floor safe.</p>
+          <p>Traction has to be engineered for the conditions a surface will actually see, the same way you would engineer load or span. That can mean raised metal dots welded into the material itself (ALGRIP®). It can also mean a metal grit sprayed into it during fabrication (OnGrip®). Either way the traction is manufactured in. What it should not mean is hoping a generic finish, an off-the-shelf coating, or a housekeeping policy will make a slippery floor safe.</p>
           <h4 style="margin-top: 24px;">How we evaluate environments</h4>
           <ul class="bullets">
             <li>Wet, greasy, and washdown conditions</li>
@@ -982,7 +1064,7 @@
         <li><strong>Match the surface to the environment.</strong> Engineered traction surfaces are not interchangeable. Selection is application-specific.</li>
         <li><strong>Specify it. Do not assume it.</strong> Make traction a line item, not an unspoken design intent.</li>
         <li><strong>Build defensibility into the record.</strong> Standards alignment, performance documentation, and consistent decision logic create a record that holds up under scrutiny.</li>
-        <li><strong>Plan for change.</strong> Conditions evolve. Leave a path for upgrades, retrofits, and adjacent applications.</li>
+        <li><strong>Plan for change.</strong> Conditions evolve. Specify for the conditions the floor will see in year ten, not just the ones it opens with.</li>
       </ol>
       <div class="cta-row" style="margin-top: 28px;">
         <a class="btn btn-primary" data-nav="contact">Talk to a specialist about your project</a>
@@ -1030,7 +1112,7 @@
         <li>If you are responsible for safety, start with the resources written for your role.</li>
         <li>If you are specifying for an active project, look at how ALGRIP® and OnGrip® compare.</li>
         <li>If you operate or maintain the facility, see how traction performs in real conditions.</li>
-        <li>If you are scoping a problem or responding to an incident, get in touch.</li>
+        <li>If you are scoping a surface and want the traction specified into it, get in touch.</li>
       </ul>
       <div class="cta-row" style="margin-top: 24px;">
         <a class="btn btn-primary" data-nav="products">Explore the products</a>
@@ -1045,7 +1127,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1063,12 +1145,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -1088,8 +1170,8 @@
         <div>
           <div class="eyebrow">Products</div>
           <h1>Engineered traction surfaces, built for the conditions you operate in.</h1>
-          <p class="hero-subhead">Two purpose-built product platforms. One way of thinking about traction performance.</p>
-          <p class="hero-body">We offer two engineered approaches to traction. One is built into the surface itself, and one is engineered to be applied where surfaces are already in service. The goal is not to sell a category. It is to match the right approach to the conditions on the ground.</p>
+          <p class="hero-subhead">Two engineered textures. Both manufactured into the surface before it ships.</p>
+          <p class="hero-body">ALGRIP® and OnGrip® are specified and fabricated from the start. Neither is a coating, an aftermarket add-on, or something we bring to a floor already in place. What separates them is the texture itself, and what that texture asks of the people who clean it.</p>
           <div class="cta-row">
             <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
           </div>
@@ -1103,7 +1185,7 @@
     <div class="container">
       <h4>The TSP product philosophy</h4>
       <h2>How we think about traction.</h2>
-      <p>Off-the-shelf solutions tend to assume an average environment. The environments where traction matters most are anything but average. Wet, greasy, washdown, and high-traffic areas defeat surfaces that were never engineered for them. Our two product platforms exist because there is no single right answer. There is a right answer for your environment, your project stage, and the level of performance you need.</p>
+      <p>Off-the-shelf solutions tend to assume an average environment. The environments where traction matters most are anything but average. Wet, greasy, washdown, and high-traffic areas defeat surfaces that were never engineered for them. Our two product platforms exist because there is no single right answer. There is a right answer for the conditions your floor actually sees, and for the cleaning it has to survive.</p>
       <h3 style="margin-top: 32px;">What every TSP product is built to do</h3>
       <ul class="bullets">
         <li>Deliver consistent traction performance under the real conditions of the application.</li>
@@ -1120,14 +1202,14 @@
         <div class="img-placeholder img-tall"><span>ALGRIP® Surface Macro Photo</span></div>
         <div>
           <h4>ALGRIP®</h4>
-          <h2>Surface-integrated traction.</h2>
-          <p>ALGRIP® is an engineered traction surface where the traction is bonded into the surface itself. It is the right choice when traction has to be a property of the floor, step, or platform rather than a layer applied on top of it.</p>
+          <h2>Raised dot traction.</h2>
+          <p>ALGRIP® bonds raised metal dots into plate and grating during fabrication. The sole of a shoe catches on the dots. Because the texture is made of discrete raised points rather than a continuous rough field, residue has fewer places to sit, and the surface washes down more easily than a grit texture does.</p>
           <h4 style="margin-top: 24px;">Best fit when</h4>
           <ul class="bullets">
-            <li>The project is at the design or specification stage.</li>
+            <li>The floor gets washed down, and sanitation drives the specification.</li>
+            <li>Food and beverage production, where cleanability is not negotiable.</li>
+            <li>Powder and wet spill conditions that need something discrete for a shoe to catch.</li>
             <li>Performance has to stay consistent over years of use, cleaning, and wear.</li>
-            <li>The application needs a surface that is engineered, manufactured, and documented to spec.</li>
-            <li>New stair treads, walkways, platforms, or access surfaces are being designed or replaced.</li>
           </ul>
           <div class="cta-row" style="margin-top: 20px;">
             <a class="btn-text" data-nav="products-algrip">Learn more about ALGRIP® →</a>
@@ -1144,16 +1226,12 @@
         <div class="img-placeholder img-tall"><span>OnGrip® Application Photo</span></div>
         <div>
           <h4>OnGrip®</h4>
-          <h2>Applied traction for existing surfaces.</h2>
-          <p>OnGrip® is an engineered, applied traction solution for environments where the surface is already in place, or where conditions have changed since the original surface was specified. It is the right choice when the goal is to bring an existing surface up to a higher level of traction performance without removing or replacing it.</p>
-          <p style="margin-top: 14px;"><strong>Most teams reach for OnGrip® because something has already happened.</strong> An incident report. An OSHA finding. A letter from the insurance carrier. A claim that surfaced traction as the issue. We meet that conversation where it is, and we work backward from the moment that triggered it to a surface decision that holds up under whatever scrutiny comes next.</p>
-          <h4 style="margin-top: 24px;">Best fit when</h4>
-          <ul class="bullets">
-            <li>An existing facility has emerging traction issues or newly identified risk areas.</li>
-            <li>A staged retrofit is the better answer than wholesale replacement.</li>
-            <li>A facility is preparing for an audit, an insurance renewal, or an operational change.</li>
-            <li>Specific zones need targeted improvement without disrupting the rest of the surface.</li>
-          </ul>
+          <h2>Spray-applied grit traction.</h2>
+          <p>OnGrip® applies a metal grit to plate and grating during fabrication. The result is a coarse, continuous, multidirectional texture. The closest everyday comparison is coarse sandpaper, with the durability of metal instead of paper. Because the field is continuous rather than dotted, it holds more of what lands on it, and it takes more work to clean than ALGRIP® does.</p>
+          <div class="open-item-note">
+            <strong>Open item · awaiting OGI</strong>
+            Where OnGrip® is the first choice is the one question this page cannot answer yet. Our sources establish what OnGrip® is and how it is applied, but not the application where it wins outright. Kevin or Jeremy needs to supply that in their own words. Nothing has been invented in its place.
+          </div>
           <div class="cta-row" style="margin-top: 20px;">
             <a class="btn-text" data-nav="products-ongrip">Learn more about OnGrip® →</a>
             <a class="btn-text" data-nav="contact" style="margin-left: 24px;">Talk to a specialist →</a>
@@ -1166,8 +1244,9 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Choosing between ALGRIP® and OnGrip®</h4>
-      <h2>Two approaches, one framework.</h2>
-      <p>Most projects lean clearly toward one product or the other. A short side-by-side helps make the call.</p>
+      <h2>What they share, and where they differ.</h2>
+      <p>Start with what is the same, because it is usually what gets misunderstood. Both textures are applied to plate and grating during manufacturing, to a surface that has not been installed yet. And both stay put under heavy traffic, which is where epoxy aggregate and painted grit finishes give up.</p>
+      <p style="margin-top: 14px;">What is left to choose between is the texture, and what the texture costs you at cleaning time.</p>
       <table class="compare">
         <thead>
           <tr>
@@ -1177,14 +1256,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Project stage</td><td>Design, new build, planned replacement</td><td>Existing surface, retrofit, staged upgrade</td></tr>
-          <tr><td>Surface relationship</td><td>Integrated into the surface itself</td><td>Engineered to be applied to an existing surface</td></tr>
-          <tr><td>Best for</td><td>Long-term, foundational specification</td><td>Targeted upgrade and operational flexibility</td></tr>
-          <tr><td>Downtime profile</td><td>Aligned with the project schedule</td><td>Designed to minimize operational disruption</td></tr>
-          <tr><td>Documentation</td><td>Manufactured-to-spec record</td><td>Application record paired with substrate documentation</td></tr>
+          <tr><td>Texture</td><td>Raised metal dots bonded into the surface</td><td>Spray-applied metal grit</td></tr>
+          <tr><td>Underfoot</td><td>Discrete raised points the sole catches on</td><td>Continuous coarse bite, closer to sandpaper</td></tr>
+          <tr><td>Cleaning</td><td>Easier. Residue has fewer places to sit</td><td>Harder. The grit holds more of what lands on it</td></tr>
+          <tr><td>Leads in</td><td>Food and beverage, washdown, powder and wet spill</td><td><span class="needs-info">[NEEDS INFO] Awaiting Kevin / Jeremy</span></td></tr>
         </tbody>
       </table>
-      <div class="pullquote" style="margin-top: 40px;">There is no universally right product. There is only the right product for the environment, the project stage, and the level of performance the application needs.</div>
+      <div class="pullquote" style="margin-top: 40px;">There is no universally right product. There is only the right texture for the conditions the floor actually sees, and for the people who have to keep it clean.</div>
     </div>
   </section>
 
@@ -1212,7 +1290,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1230,12 +1308,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -1265,7 +1343,7 @@
           <div class="eyebrow">Products · ALGRIP®</div>
           <h1>ALGRIP® is traction welded into the surface itself.</h1>
           <p class="hero-subhead">A patented laser deposition process bonds metal traction features directly to metal grating or plate flooring. The result is engineered, durable slip resistance in wet, oily, or dirty conditions.</p>
-          <p class="hero-body">When a floor, stair tread, or walkway needs to perform across years of use and across changing conditions, ALGRIP® is the surface decision. It is engineered into the substrate, not applied on top of it, which is why it holds up where coatings and finishes age out.</p>
+          <p class="hero-body">The traction features are welded into the substrate during fabrication, which is why ALGRIP® holds up where epoxy aggregates, painted grit, and adhesive finishes age out. And because the texture is made of discrete raised dots rather than a continuous rough field, it cleans more easily than a grit surface does. That combination is why it leads in food and beverage.</p>
           <div class="cta-row">
             <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
             <a class="btn" data-nav="contact">Talk to an engineer</a>
@@ -1352,17 +1430,17 @@
       <div class="split">
         <div>
           <h4>When to specify ALGRIP®</h4>
-          <h2>At design. At replacement. At the capital plan.</h2>
-          <p>ALGRIP® fits when the surface itself is being decided. The traction features are part of the substrate, so the decision lives with the building. We work with engineers and specifiers during design to identify the right grating type, material, and finish, and to produce documentation that holds up under audit.</p>
+          <h2>When cleanability decides it.</h2>
+          <p>ALGRIP® and OnGrip® are both specified and fabricated from the start, so the choice between them is not about project timing. It is about texture. ALGRIP® is the answer when the floor gets washed down and the texture cannot be allowed to hold what lands in it. We work with engineers and specifiers during design to identify the right grating type, material, and finish, and to produce documentation that holds up under audit.</p>
           <ul class="bullets">
-            <li>Design and specification stage on a new project</li>
-            <li>Like-for-like replacement of an aging surface</li>
-            <li>Capital projects and planned floor upgrades</li>
+            <li>Washdown environments where sanitation drives the specification</li>
+            <li>Food and beverage production, dairy, and protein processing</li>
+            <li>Powder and wet spill conditions that need discrete raised points to catch a sole</li>
             <li>Compliance-driven specs (OSHA, ADA, AASHTO)</li>
             <li>High-demand surfaces where consistency over years is required</li>
           </ul>
         </div>
-        <div class="img-placeholder img-tall"><span>Application Image · Spec / install context</span></div>
+        <div class="img-placeholder img-tall"><span>Application Image · Washdown / sanitary context</span></div>
       </div>
     </div>
   </section>
@@ -1406,7 +1484,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1424,12 +1502,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -1457,9 +1535,9 @@
       <div class="hero-grid">
         <div>
           <div class="eyebrow">Products · OnGrip®</div>
-          <h1>OnGrip® is engineered traction applied to the surface already on the floor.</h1>
-          <p class="hero-subhead">A thermal metal spray process coats existing metal surfaces with a high-traction layer. It is the right product when the surface has to stay where it is and the traction has to come to it.</p>
-          <p class="hero-body">OnGrip® is the right choice when the surface is already in place and the work is to upgrade it. That includes staged retrofits, problem zones in live facilities, and remediation after an incident, audit finding, or insurance demand. The process is engineered, applied directly to the surface, and documented as it goes.</p>
+          <h1>OnGrip® is a metal grit texture, sprayed into the surface during fabrication.</h1>
+          <p class="hero-subhead">A spray-applied metal grit gives plate and grating a coarse, multidirectional bite. The closest everyday comparison is coarse sandpaper, with the durability of metal instead of paper.</p>
+          <p class="hero-body">OnGrip® is specified and fabricated from the start. We apply it to plate and grating during manufacturing, which means the traction arrives as part of the surface rather than as something brought to a floor that is already down. It is not a coating, and we do not spray it onto flooring already in place.</p>
           <div class="cta-row">
             <a class="btn btn-primary" data-nav="contact">Request a sample or spec consult</a>
             <a class="btn" data-nav="contact">Talk to a specialist</a>
@@ -1475,12 +1553,16 @@
   <section class="page-section">
     <div class="container">
       <div class="split">
-        <div class="img-placeholder"><span>Diagram · Thermal metal spray process</span></div>
+        <div class="img-placeholder"><span>Diagram · Spray-applied grit process</span></div>
         <div>
           <h4>How it works</h4>
-          <h2>A thermal metal spray process.</h2>
-          <p>An engineered, high-traction metal coating is thermally applied to the existing surface. The result is a durable, multidirectional traction layer that performs in slippery, wet, or oily conditions. The process is documented as it is applied, which makes the result defensible to safety, audit, and insurance teams later.</p>
+          <h2>A spray-applied metal grit.</h2>
+          <p>Metal grit is sprayed onto plate or grating during fabrication, producing a continuous, coarse texture that bites in every direction of travel. It performs in slippery, wet, and oily conditions, and it stays put under heavy traffic, which is where epoxy aggregate and painted grit finishes give up. The result is documented as it is manufactured.</p>
           <p>OnGrip® is engineered. It is not a paint, not a tape, and not a hopeful coating.</p>
+          <div class="open-item-note">
+            <strong>Open item · awaiting OGI</strong>
+            Confirm the process name. Our sources describe OnGrip® as a spray-applied grit and OGI's internal lexicon calls it a "spray traction surface," but they do not confirm the earlier "thermal metal spray" language, so that term has been removed rather than repeated.
+          </div>
         </div>
       </div>
     </div>
@@ -1511,8 +1593,8 @@
   <section class="page-section">
     <div class="container">
       <h4>Substrate compatibility</h4>
-      <h2>Where OnGrip® can be applied.</h2>
-      <p>OnGrip® bonds to three substrates that cover most of the metal surfaces already on industrial, public-access, and commercial properties.</p>
+      <h2>What we apply OnGrip® to.</h2>
+      <p>OnGrip® is applied to plate and grating during fabrication, in three materials. We do not apply it to concrete, or to flooring already in place.</p>
       <div class="card-grid-3" style="margin-top: 32px;">
         <div class="card"><div class="card-body"><h3>Carbon steel</h3><p>Plate flooring, stair treads, grating, ladder rungs, and structural surfaces across industrial and infrastructure assets.</p></div></div>
         <div class="card"><div class="card-body"><h3>Stainless steel</h3><p>Food processing, pharmaceutical, and sanitary environments where stainless is the substrate of record.</p></div></div>
@@ -1524,8 +1606,8 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Industries that specify OnGrip®</h4>
-      <h2>Wherever a surface in service needs to be elevated.</h2>
-      <p class="lead">OnGrip® is in service across commercial, government, infrastructure, manufacturing, oil and gas, utilities, water and wastewater, pedestrian bridges, and parks and piers. The common thread is a surface that cannot be replaced economically and a need to upgrade traction against the conditions on the floor.</p>
+      <h2>In service across infrastructure and industry.</h2>
+      <p class="lead">OnGrip® is in service across commercial, government, infrastructure, manufacturing, oil and gas, utilities, water and wastewater, pedestrian bridges, and parks and piers. <span class="needs-info">[NEEDS INFO] The common thread across these sectors, in OGI's words. Awaiting Kevin / Jeremy.</span></p>
       <div class="chip-row" style="margin-top: 24px;">
         <span class="chip">Commercial</span>
         <span class="chip">Government</span>
@@ -1545,17 +1627,14 @@
       <div class="split">
         <div>
           <h4>When to specify OnGrip®</h4>
-          <h2>When the surface stays and the traction comes to it.</h2>
-          <p>OnGrip® fits when the surface is already in place and replacing it is not practical, not affordable, or not the right answer for the timeline. We work with operations, safety, and engineering teams to scope the work, plan around production, and document the result.</p>
-          <ul class="bullets">
-            <li>The surface is already in service and replacing it is not on the table</li>
-            <li>A staged retrofit is the better answer than wholesale replacement</li>
-            <li>A recent incident, audit finding, or insurance demand has created a remediation window</li>
-            <li>Specific zones (entries, transitions, problem corners) need targeted improvement</li>
-            <li>Lead times and downtime windows are tight</li>
-          </ul>
+          <h2>This section is waiting on OGI.</h2>
+          <p>Everything above describes what OnGrip® is and how it is made. This section has to describe where it wins, and that is the one thing our sources do not settle. The previous version of this page answered the question with a retrofit story that was not true, which is what triggered this revision round. We are not replacing one invention with another.</p>
+          <div class="open-item-note">
+            <strong>Open item · awaiting Kevin or Jeremy</strong>
+            Where is OnGrip® the first choice? We know the texture is coarser than ALGRIP® and harder to clean, which points away from washdown and sanitary work. What we need is the affirmative case, in OGI's words: the application where a customer should specify OnGrip® over ALGRIP®, and why. Is grating the driver? One or two sentences closes this section and releases ClickUp 86ah1dt4j.
+          </div>
         </div>
-        <div class="img-placeholder img-tall"><span>Application Image · In-service retrofit context</span></div>
+        <div class="img-placeholder img-tall"><span>Application Image · Fabrication context</span></div>
       </div>
     </div>
   </section>
@@ -1563,23 +1642,23 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Why teams choose OnGrip®</h4>
-      <h2>What sets it apart from the in-house workarounds.</h2>
+      <h2>What sets it apart from a coating.</h2>
       <div class="card-grid-2">
         <div class="card"><div class="card-body">
-          <h3>Flexible application process.</h3>
-          <p>The process works around production schedules and operating windows. Application is staged against the realities on the floor, not against an idealized installation calendar.</p>
+          <h3>It does not wear off.</h3>
+          <p>Epoxy aggregate and painted grit finishes are consumable. Under heavy traffic they thin, then fail, and the original problem comes back. A metal grit sprayed into the surface during fabrication is permanent.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>Short lead times.</h3>
-          <p>The remediation window after an incident or audit is rarely long. OnGrip® compresses the path from decision to documented result.</p>
+          <h3>Bite in every direction.</h3>
+          <p>The texture is continuous rather than directional, so it performs the same whether the traffic is walking, turning, braking, or rolling across it.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>Lower total cost than replacement.</h3>
-          <p>Specifically because the existing surface stays in place, total cost is lower than removing and replacing grating, treads, or plate.</p>
+          <h3>Part of the surface, not added to it.</h3>
+          <p>OnGrip® is specified and fabricated from the start. There is no separate application step to schedule, no downtime to plan around, and no adhesion question to answer later.</p>
         </div></div>
         <div class="card"><div class="card-body">
           <h3>Engineered, documented performance.</h3>
-          <p>The result is documented to a standard that holds up in front of a safety auditor, an OSHA inspector, or an insurance underwriter.</p>
+          <p>The performance profile is documented as the surface is manufactured, to a standard that holds up in front of a safety auditor or an inspector.</p>
         </div></div>
       </div>
     </div>
@@ -1613,12 +1692,12 @@
   <section class="page-section">
     <div class="container">
       <h4>Engineering and specification support</h4>
-      <h2>We work alongside operations, safety, and engineering teams.</h2>
-      <p>Most OnGrip® projects involve a building that is still operating. The work happens around production. Our team helps scope the substrate, plan the application around the operating window, and document the result for the people who will read it later.</p>
+      <h2>We work alongside design and engineering teams.</h2>
+      <p>OnGrip® is manufactured to specification. Our team helps confirm the substrate and material, the dimensional and load requirements, and the performance documentation your safety and audit teams will need on file.</p>
       <ul class="bullets">
-        <li>Substrate and condition review of the surface already in place</li>
-        <li>Application planning around operating windows and production constraints</li>
-        <li>Specification language and documentation for safety, audit, and insurance teams</li>
+        <li>Environmental review of the operating conditions</li>
+        <li>Substrate, material, and grating type recommendation</li>
+        <li>Specification language and detail support for design documents</li>
         <li>Sample coordination and on-site evaluation when helpful</li>
       </ul>
       <div class="cta-row" style="margin-top: 24px;">
@@ -1634,7 +1713,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1652,12 +1731,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -1730,7 +1809,11 @@
     <div class="container">
       <h4>Where each product fits in your industry</h4>
       <h2>Both products, four industries.</h2>
-      <p class="lead">Most facilities end up using both ALGRIP® and OnGrip® over time, deployed against different parts of the property. The matrix below shows where each one tends to do its best work.</p>
+      <p class="lead">Both ALGRIP® and OnGrip® are specified and fabricated from the start, so the question is never which product suits the stage of your project. It is which texture suits the surface and the cleaning it has to survive.</p>
+      <div class="open-item-note">
+        <strong>Open item · awaiting OGI</strong>
+        The OnGrip® column of this matrix is blank on purpose. The previous version filled it with in-service upgrades and post-incident remediation, which is not what OnGrip® is. We can populate it once Kevin or Jeremy tells us where OnGrip® is the first choice in each of these industries.
+      </div>
       <table class="matrix">
         <thead>
           <tr>
@@ -1742,23 +1825,23 @@
         <tbody>
           <tr>
             <th>Food and Beverage</th>
-            <td>New construction, line replacements, and capital projects. Specified into floors, walkways, and stair treads that have to perform across years of washdown.</td>
-            <td>Targeted upgrades in problem zones while production is running. The remediation answer for incidents, audit findings, and pre-renewal upgrades.</td>
+            <td>The lead product. Discrete raised dots grip a wet sole without holding residue, which is what daily washdown and sanitation protocols demand. Specified into floors, walkways, and stair treads.</td>
+            <td><span class="needs-info">[NEEDS INFO]</span></td>
           </tr>
           <tr>
             <th>Manufacturing</th>
-            <td>New equipment lines, expansions, and floor replacements. Specified into surfaces that have to survive forklift traffic, abrasion, and chemistry over time.</td>
-            <td>In-service upgrades to specific zones like forklift crossings, problem cells, and post-incident areas without taking the line down.</td>
+            <td>Specified into surfaces that have to survive forklift traffic, abrasion, oils, and coolant chemistry over years. Cleans down where powder and wet spills collect.</td>
+            <td><span class="needs-info">[NEEDS INFO]</span></td>
           </tr>
           <tr>
             <th>Hospitality and Public Access</th>
-            <td>New construction, renovations, and brand-standard upgrades. Specified into lobbies, pool decks, stair treads, and back-of-house kitchens.</td>
-            <td>Existing properties dealing with claims, audits, or specific problem zones, applied without taking the space offline.</td>
+            <td>Specified into lobbies, pool decks, stair treads, and back-of-house kitchens, where the surface has to grip wet feet and still be cleaned every day.</td>
+            <td><span class="needs-info">[NEEDS INFO]</span></td>
           </tr>
           <tr>
             <th>Transportation and Infrastructure</th>
-            <td>Capital projects like transit platforms, gangways, ramp landings, and stair treads. Specified into assets that have to last for decades.</td>
-            <td>In-service upgrades to specific zones like platform edges, transitions, and problem stairs without taking the asset offline.</td>
+            <td>Transit platforms, gangways, ramp landings, and stair treads. Specified into assets that have to last for decades under public traffic.</td>
+            <td><span class="needs-info">[NEEDS INFO]</span></td>
           </tr>
         </tbody>
       </table>
@@ -1775,7 +1858,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1793,12 +1876,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -1893,16 +1976,16 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Where each product platform fits</h4>
-      <h2>Most food and beverage facilities end up using both.</h2>
-      <p>They get deployed against different zones and different timelines.</p>
+      <h2>In food and beverage, ALGRIP® leads.</h2>
+      <p>Both products are specified and fabricated from the start, so the choice comes down to texture and cleanability.</p>
       <div class="card-grid-2">
         <div class="card"><div class="card-body">
-          <h3>ALGRIP® for the design conversation</h3>
-          <p>Fits when the work is part of a planned design, replacement, or capital project, and consistent surface-integrated traction is required.</p>
+          <h3>ALGRIP® for washdown</h3>
+          <p>Raised metal dots grip a wet sole without giving residue anywhere to sit. In a plant that washes down every shift, a texture that cleans easily is not a preference. It is the specification.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>OnGrip® for the live facility</h3>
-          <p>Fits when the facility is in production, the surface is already in place, and traction needs to be elevated without rebuilding the floor.</p>
+          <h3>OnGrip® · awaiting OGI</h3>
+          <p>The coarser grit texture, sprayed into plate and grating during the same fabrication step. Where it is the first choice in food and beverage is the open question this revision round could not close. <span class="needs-info">[NEEDS INFO] Awaiting Kevin / Jeremy</span></p>
         </div></div>
       </div>
       <div class="pullquote" style="margin-top: 40px;">In food and beverage, traction is rarely the headline risk on the safety dashboard. It is almost always one of the largest controllable risks underneath the headline.</div>
@@ -1938,8 +2021,8 @@
         </div>
         <div class="resource-card">
           <h4>Tool</h4>
-          <h3>Emergency fix vs. planned investment</h3>
-          <p>A side-by-side cost framework for traction retrofits and planned upgrades.</p>
+          <h3>Coated finish vs. manufactured-in traction</h3>
+          <p>A side-by-side cost framework over a five-year horizon, including replacement cycles.</p>
           <div class="resource-meta">For: Procurement · Calculator</div>
         </div>
       </div>
@@ -1955,7 +2038,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -1973,12 +2056,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2073,16 +2156,16 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Where each product platform fits</h4>
-      <h2>Manufacturing facilities often need both.</h2>
-      <p>The two product platforms cover different sides of the same problem.</p>
+      <h2>Two textures, one fabrication step.</h2>
+      <p>Both products are specified and fabricated from the start. What separates them on a plant floor is the texture and what it costs to keep clean.</p>
       <div class="card-grid-2">
         <div class="card"><div class="card-body">
-          <h3>ALGRIP® for new lines and replacements</h3>
-          <p>Fits when a capital project, equipment move, or floor replacement is on the schedule. Useful where consistent surface-integrated traction is required across the life of the asset.</p>
+          <h3>ALGRIP® for powder and wet spill</h3>
+          <p>Discrete raised dots give a sole something to catch on, and they release what settles between them. Specified into surfaces that face forklift traffic, oils, coolant chemistry, and abrasion over years.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>OnGrip® for the live floor</h3>
-          <p>Fits when production is running and traction needs to be elevated in specific zones without taking down the line. Useful for problem corners, transitions, and post-incident upgrades.</p>
+          <h3>OnGrip® · awaiting OGI</h3>
+          <p>The coarser grit texture, sprayed into plate and grating during the same fabrication step. Where it is the first choice in manufacturing is the open question this revision round could not close. <span class="needs-info">[NEEDS INFO] Awaiting Kevin / Jeremy</span></p>
         </div></div>
       </div>
       <div class="pullquote" style="margin-top: 40px;">In manufacturing, traction is rarely treated as engineering. It is treated as cleanup. The performance gap between those two approaches is the whole point.</div>
@@ -2135,7 +2218,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -2153,12 +2236,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2253,16 +2336,16 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Where each product platform fits</h4>
-      <h2>Two product platforms for very different kinds of spaces.</h2>
-      <p>Most hospitality programs end up using both, sometimes within the same property.</p>
+      <h2>Two textures, specified into the property.</h2>
+      <p>Both products are manufactured into the surface, so traction becomes part of the brand standard rather than a separate line item.</p>
       <div class="card-grid-2">
         <div class="card"><div class="card-body">
-          <h3>ALGRIP® for the spaces you build</h3>
-          <p>Lobbies, pool decks, stair treads, and back-of-house kitchens being designed or replaced. Built into the surface so traction becomes part of the brand standard rather than a separate spec.</p>
+          <h3>ALGRIP® for wet feet and daily cleaning</h3>
+          <p>Lobbies, pool decks, stair treads, and back-of-house kitchens. The dot texture grips a wet foot and still cleans down on a housekeeping schedule, which matters in spaces guests see.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>OnGrip® for the spaces you operate</h3>
-          <p>Existing properties dealing with emerging traction issues, post-incident upgrades, or targeted improvements to specific zones without taking the space offline.</p>
+          <h3>OnGrip® · awaiting OGI</h3>
+          <p>The coarser grit texture, sprayed into plate and grating during the same fabrication step. Where it is the first choice in hospitality and public-access properties is the open question this revision round could not close. <span class="needs-info">[NEEDS INFO] Awaiting Kevin / Jeremy</span></p>
         </div></div>
       </div>
       <div class="pullquote" style="margin-top: 40px;">In hospitality, the surface is part of the experience. Treating traction as an engineering problem makes the experience defensible too.</div>
@@ -2315,7 +2398,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -2333,12 +2416,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2396,7 +2479,7 @@
       <h2>Five patterns we see in transportation and infrastructure.</h2>
       <ol class="numbered">
         <li><strong>Anti-slip tape is treated as a primary engineering control.</strong> It peels, wears, and creates trip hazards of its own.</li>
-        <li><strong>The surface gets replaced after every incident.</strong> What it should get is an upgrade against the condition that caused the incident.</li>
+        <li><strong>The surface gets replaced after every incident, like for like.</strong> The replacement should be specified against the condition that caused the incident, not against the surface that failed.</li>
         <li><strong>Transitions between surfaces are specified separately from the main surface.</strong> Platform edges, gangways, ramp landings. They rarely match in performance.</li>
         <li><strong>UV and freeze-thaw exposure are treated as inevitable rather than as specifiable design conditions.</strong> They are not inevitable. They are predictable.</li>
         <li><strong>Maintenance contracts cover cleaning, not surface performance.</strong> The original specification is rarely defended over time.</li>
@@ -2433,16 +2516,16 @@
   <section class="page-section alt">
     <div class="container">
       <h4>Where each product platform fits</h4>
-      <h2>Transportation assets often use both.</h2>
-      <p>Capital and operating budgets are different problems. The product platforms cover both.</p>
+      <h2>Two textures, specified into the asset.</h2>
+      <p>Both products are fabricated into the surface before it ships, which is what long-life public infrastructure requires.</p>
       <div class="card-grid-2">
         <div class="card"><div class="card-body">
-          <h3>ALGRIP® for new builds and capital projects</h3>
-          <p>Built for the long-life performance public infrastructure requires. Platforms, stair treads, gangways, and access points specified as part of the asset itself.</p>
+          <h3>ALGRIP® for platforms and access points</h3>
+          <p>Platforms, stair treads, gangways, and ramp landings specified as part of the asset itself. Multidirectional grip that survives decades of public traffic and the cleaning that comes with it.</p>
         </div></div>
         <div class="card"><div class="card-body">
-          <h3>OnGrip® for in-service upgrades</h3>
-          <p>Targeted improvement to specific zones (platform edges, transitions, problem stairs) without taking the asset offline or rebuilding from scratch.</p>
+          <h3>OnGrip® · awaiting OGI</h3>
+          <p>The coarser grit texture, sprayed into plate and grating during the same fabrication step. Where it is the first choice in transportation and infrastructure is the open question this revision round could not close. <span class="needs-info">[NEEDS INFO] Awaiting Kevin / Jeremy</span></p>
         </div></div>
       </div>
       <div class="pullquote" style="margin-top: 40px;">In transportation, the surface is doing safety work the public never sees. The cost of getting it wrong is the only time anyone notices.</div>
@@ -2495,7 +2578,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -2513,12 +2596,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2612,7 +2695,7 @@
         <div class="resource-card"><h4>Article · Safety</h4><h3>The hidden cost of last-minute safety retrofits.</h3><p>What late-stage traction decisions cost financially, operationally, and reputationally.</p><div class="resource-meta">Awareness · 5 min</div></div>
         <div class="resource-card"><h4>Guide · Engineering</h4><h3>When traction belongs in the base spec.</h3><p>A practical framework for treating traction as a design variable.</p><div class="resource-meta">Consideration · 9 min</div></div>
         <div class="resource-card"><h4>Checklist · Ops</h4><h3>Phasing traction upgrades without shutting down production.</h3><p>A downloadable checklist for operations leaders managing live facilities.</p><div class="resource-meta">Consideration · PDF</div></div>
-        <div class="resource-card"><h4>Tool · Procurement</h4><h3>Emergency fix vs. planned investment.</h3><p>What late retrofits actually cost over a five-year horizon.</p><div class="resource-meta">Decision · Calculator</div></div>
+        <div class="resource-card"><h4>Tool · Procurement</h4><h3>Coated finish vs. manufactured-in traction.</h3><p>What a consumable finish actually costs over a five-year horizon, replacement cycles included.</p><div class="resource-meta">Decision · Calculator</div></div>
         <div class="resource-card"><h4>Article · Ops</h4><h3>Training vs. engineering controls.</h3><p>What actually reduces slips, and where each approach hits its limits.</p><div class="resource-meta">Awareness · 6 min</div></div>
         <div class="resource-card"><h4>Standards · Safety</h4><h3>OSHA, ANSI, ASTM, ADA. A defensible reference.</h3><p>The standards that matter most, written for the people who have to defend the decision.</p><div class="resource-meta">Reference</div></div>
         <div class="resource-card"><h4>Article · Manufacturing</h4><h3>OSHA exposure and the hierarchy of controls.</h3><p>Why engineering controls outperform behavioral controls in slip prevention, and what that means for citations.</p><div class="resource-meta">Manufacturing · 7 min</div></div>
@@ -2620,21 +2703,16 @@
         <div class="resource-card"><h4>Tool · Transportation</h4><h3>Capital planning for traction infrastructure.</h3><p>Treating traction as part of the asset, not part of maintenance.</p><div class="resource-meta">Transportation · Framework</div></div>
       </div>
 
-      <h4 style="margin-top: 48px;">If something already happened</h4>
-      <h2 style="font-size: 28px;">Reactive-stage resources.</h2>
-      <p>For teams in the middle of a slip-and-fall claim, an OSHA citation, an insurance renewal, or another time-sensitive trigger. Written to help you respond defensibly without overcommitting to a fix that ages out next year.</p>
-      <div class="resource-grid">
-        <div class="resource-card"><h4>Guide · Safety, Owner</h4><h3>What to do in the first 30 days after a slip-and-fall claim.</h3><p>A short, role-aware sequence for the moment after an incident. What gets documented, who gets briefed, and what does not get said.</p><div class="resource-meta">Reactive · 7 min</div></div>
-        <div class="resource-card"><h4>Guide · Safety, Engineer</h4><h3>Responding to an OSHA traction-related citation.</h3><p>How to scope a corrective action that holds up under follow-up inspection. Without overspending, and without setting up the next citation.</p><div class="resource-meta">Reactive · 8 min</div></div>
-        <div class="resource-card"><h4>Guide · Owner, Procurement</h4><h3>Briefing your insurer on a traction upgrade before renewal.</h3><p>What underwriters want to see in writing, and what makes a traction upgrade actually move the renewal conversation.</p><div class="resource-meta">Reactive · 6 min</div></div>
-        <div class="resource-card"><h4>Checklist · Safety, Owner</h4><h3>Defensible documentation after a public-access slip incident.</h3><p>A downloadable checklist for what to capture, when, and how it gets stored so the record holds up two years from now.</p><div class="resource-meta">Reactive · PDF</div></div>
+      <div class="open-item-note" style="margin-top: 48px;">
+        <strong>Removed in this revision · confirm with OGI</strong>
+        A four-piece reactive-stage layer sat here: first 30 days after a slip-and-fall claim, responding to an OSHA traction citation, briefing your insurer before renewal, and post-incident documentation. It has been removed per client direction. It was also the layer most entangled with the retrofit error, since it positioned OnGrip® as the product you reach for after something goes wrong. Josh to confirm against the v2.2 doc that the removal is meant to be total.
       </div>
 
       <h4 style="margin-top: 48px;">For insurance and risk audiences</h4>
       <h2 style="font-size: 28px;">Resources for underwriters and risk engineers.</h2>
-      <p>Insurance underwriters and risk engineers shape what gets specified after an incident. These resources are written for them, so the criteria they use to evaluate traction reflect engineered standards rather than commodity ones.</p>
+      <p>Insurance underwriters and risk engineers shape what gets specified. These resources are written for them, so the criteria they use to evaluate traction reflect engineered standards rather than commodity ones. <span class="needs-info">[NEEDS INFO] Whether this audience block survives the incident-response removal. Josh to confirm.</span></p>
       <div class="resource-grid">
-        <div class="resource-card"><h4>Reference · Insurance, Owner</h4><h3>How risk engineers evaluate traction at site inspection.</h3><p>A look at the criteria that drive a favorable site survey, and where engineered traction surfaces meaningfully change the inspection outcome.</p><div class="resource-meta">Underwriter · 8 min</div></div>
+        <div class="resource-card"><h4>Reference · Insurance, Owner</h4><h3>How risk engineers evaluate traction at site inspection.</h3><p>The criteria that drive a favorable site survey, and where a manufactured-in traction surface changes the inspection outcome against a coated one.</p><div class="resource-meta">Underwriter · 8 min</div></div>
         <div class="resource-card"><h4>Tool · Insurance, Safety</h4><h3>A traction questionnaire for your next site survey.</h3><p>A worksheet underwriters and risk engineers can use to assess traction defensibility at any insured location.</p><div class="resource-meta">Underwriter · Worksheet</div></div>
       </div>
     </div>
@@ -2659,7 +2737,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -2677,12 +2755,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2810,7 +2888,7 @@
       <div class="contact-cta-grid">
         <div class="contact-cta-text">
           <h4>Get in touch</h4>
-          <h2>Have a project, a question, or an incident?</h2>
+          <h2>Have a project or a question?</h2>
           <p>Tell us where you are. A specialist replies within one business day.</p>
         </div>
         <form class="contact-cta-form" onsubmit="event.preventDefault();">
@@ -2828,12 +2906,12 @@
               <option value="">Select one</option>
               <option>I want to learn more</option>
               <option>I'm scoping a project</option>
-              <option>Responding to an incident</option>
+              <option>I'm comparing ALGRIP® and OnGrip®</option>
             </select>
           </div>
           <div class="form-row">
             <label>Tell us more</label>
-            <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+            <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Send</button>
         </form>
@@ -2853,7 +2931,7 @@
         <div>
           <div class="eyebrow">Contact</div>
           <h1>Tell us about your project. Or just your problem.</h1>
-          <p class="hero-subhead">Whether you are scoping a new facility, responding to an audit, or working through your options, we can help you think clearly about traction.</p>
+          <p class="hero-subhead">Whether you are scoping a new facility, specifying against a compliance requirement, or choosing between ALGRIP® and OnGrip®, we can help you think clearly about traction.</p>
           <p class="hero-body">Most of the conversations we have do not start with a product question. They start with a project, a recent incident, or a budget discussion that surfaced traction as an open item. Tell us where you are, and we will meet you there.</p>
         </div>
         <div class="img-placeholder"><span>Contact Image · Specialist / consultation context</span></div>
@@ -2878,12 +2956,12 @@
             <option value="">Select one</option>
             <option>I want to learn more</option>
             <option>I'm scoping a project</option>
-            <option>Responding to an incident</option>
+            <option>I'm comparing ALGRIP® and OnGrip®</option>
           </select>
         </div>
         <div class="form-row">
           <label>Tell us more</label>
-          <textarea placeholder="What you are working on, what happened, or what you are trying to figure out." required></textarea>
+          <textarea placeholder="What you are working on, or what you are trying to figure out." required></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send</button>
       </form>
@@ -2894,7 +2972,7 @@
     <div class="container">
       <h4>What happens next</h4>
       <h2>You will hear back within one business day.</h2>
-      <p>We acknowledge the message, route it to the right specialist, and reply with the right next step. If you are responding to an incident, the message gets flagged for faster handling internally. If you are scoping a project, a specialist follows up to schedule a conversation. If you are learning more, you will get a short reading list pointed at your role and your industry.</p>
+      <p>We acknowledge the message, route it to the right specialist, and reply with the right next step. If you are scoping a project, a specialist follows up to schedule a conversation. If you are choosing between ALGRIP® and OnGrip®, an engineer walks you through the texture and cleanability trade-off. If you are learning more, you will get a short reading list pointed at your role and your industry.</p>
     </div>
   </section>
 </div>
